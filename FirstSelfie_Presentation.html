@@ -39,11 +39,11 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Presentation Container: auto-scales to fit viewport height cleanly */
+/* Presentation Container: auto-scales to fit viewport height cleanly without scroll */
 .dw {
   width: 100%;
-  max-width: min(1440px, calc((100vh - 100px) * 16 / 9));
-  padding: 16px 20px 85px;
+  max-width: min(1440px, calc((100vh - 95px) * 16 / 9));
+  padding: 12px 18px 80px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -168,7 +168,7 @@ html, body {
 
 /* TYPOGRAPHY */
 .hl {
-  font-size: clamp(24px, 3.2vw, 42px);
+  font-size: clamp(24px, 3.1vw, 40px);
   font-weight: 800;
   color: var(--bw);
   letter-spacing: -0.6px;
@@ -181,9 +181,9 @@ html, body {
   color: var(--er);
 }
 .bt {
-  font-size: 15px;
+  font-size: 14.5px;
   color: var(--gm);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 .bt strong {
   color: var(--bw);
@@ -197,7 +197,7 @@ html, body {
   background: rgba(255, 107, 0, 0.12);
   border: 1px solid rgba(255, 107, 0, 0.45);
   border-radius: 3px;
-  padding: 6px 14px;
+  padding: 5px 12px;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -241,7 +241,7 @@ html, body {
   background: #0d0d0d;
   border-radius: 8px;
   border: 0.5px solid rgba(255, 107, 0, 0.22);
-  padding: 6px;
+  padding: 4px;
   overflow: hidden;
   position: relative;
 }
@@ -259,7 +259,7 @@ html, body {
 /* SLIDE NUMBER */
 .sn {
   position: absolute;
-  bottom: 14px;
+  bottom: 12px;
   right: 22px;
   font-size: 11px;
   font-weight: 700;
@@ -299,7 +299,7 @@ html, body {
   background: var(--dc);
   border: 1px solid var(--ob);
   color: var(--bw);
-  padding: 9px 22px;
+  padding: 8px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
@@ -326,8 +326,8 @@ html, body {
   text-align: center;
 }
 .nd {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background: #252525;
   cursor: pointer;
@@ -344,11 +344,11 @@ html, body {
   background: var(--dc);
   border: 1px solid #333;
   color: #999;
-  padding: 9px 16px;
+  padding: 8px 14px;
   border-radius: 5px;
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 1px;
   transition: all 0.25s;
@@ -378,7 +378,7 @@ html, body {
 
 /* ANIMATIONS */
 @keyframes fiu {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .sl.active > * {
@@ -404,28 +404,28 @@ svg text {
     
   <div class="glow" style="width:460px;height:460px;right:10%;top:50%;transform:translateY(-50%)"></div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;
-              padding:64px 60px 64px 80px;z-index:2">
-    <div style="font-size:12px;font-weight:700;letter-spacing:3.5px;color:var(--bo);margin-bottom:24px;text-transform:uppercase">
+              padding:50px 50px 50px 70px;z-index:2">
+    <div style="font-size:12px;font-weight:700;letter-spacing:3.5px;color:var(--bo);margin-bottom:20px;text-transform:uppercase">
       FirstSelfie Strategic Briefing // 2026
     </div>
-    <h1 class="hl" style="font-size:clamp(32px,4.2vw,56px);margin-bottom:20px;line-height:1.12">
+    <h1 class="hl" style="font-size:clamp(32px,4.2vw,56px);margin-bottom:18px;line-height:1.12">
       The End of<br><span>Copycat</span><br>Personal Branding
     </h1>
-    <p class="bt" style="max-width:480px;margin-bottom:28px;font-size:16px">
+    <p class="bt" style="max-width:480px;margin-bottom:24px;font-size:16px">
       The 3-Star Architecture to engineer an uncopyable, compounding Identity Brand.
     </p>
     <div style="font-size:15px;font-weight:600;color:var(--wa);
                 border-left:3px solid var(--bo);padding-left:16px;letter-spacing:.5px">
       Your First Frame to a Million Faces.
     </div>
-    <div style="margin-top:34px;display:flex;gap:12px;flex-wrap:wrap">
+    <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
       <div class="badge">2026 EDITION</div>
       <div class="badge">3-STAR FRAMEWORK</div>
       <div class="badge">IDENTITY BRAND</div>
     </div>
   </div>
   <div style="width:42%;display:flex;align-items:center;justify-content:center;
-              flex-direction:column;gap:0;z-index:2;padding:40px">
+              flex-direction:column;gap:0;z-index:2;padding:30px">
     <div style="background:linear-gradient(145deg,rgba(255,107,0,.09),rgba(20,20,20,.95));
                 border:1px solid rgba(255,107,0,.42);border-radius:14px;padding:34px;
                 display:flex;flex-direction:column;align-items:center;gap:16px;
@@ -454,121 +454,158 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 64px 30px;z-index:2">
-    <div class="badge" style="margin-bottom:12px">CATEGORY-AGNOSTIC VALIDATION</div>
-    <div style="margin-bottom:20px">
-      <h2 class="hl">Tested Across Every <span>High-Stakes</span> Category</h2>
-      <p class="bt" style="margin-top:8px;font-size:15px">
-        Scaled authority for Nuke Code, Finance With Raghu, Deepan, Sarathi, Wedding Dhanushya, Medical Practices &amp; White Paper House Agency.
+  <div style="flex:1;display:flex;flex-direction:column;padding:26px 50px 22px;z-index:2">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px">
+      <div>
+        <div class="badge" style="margin-bottom:6px">CROSS-INDUSTRY PROOF OF CONCEPT</div>
+        <h2 class="hl" style="font-size:clamp(22px,2.6vw,34px)">Validated Across <span>High-Ticket B2B, Tech, and Services</span></h2>
+      </div>
+      <p class="bt" style="font-size:13.5px;max-width:440px;text-align:right">
+        Scaled authority profiles proven across wealth, healthcare, enterprise AI, media, SaaS & luxury B2C.
       </p>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:14px;flex:1">
-      
-    <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.25);border-radius:8px;
-                padding:18px 12px;display:flex;flex-direction:column;align-items:center;
-                gap:10px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.4)">
-      <div style="position:absolute;top:8px;right:8px;width:18px;height:18px;
-                  background:var(--bo);border-radius:50%;display:flex;align-items:center;
-                  justify-content:center;font-size:10px;color:#000;font-weight:900">&#10003;</div>
-      <div style="width:62px;height:62px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;flex-shrink:0;background:#1a0800;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:var(--bo);box-shadow:0 0 15px rgba(255,107,0,0.25)">
-  <img src="Proof-20260906T155032Z-1-001/Proof/Profile/Finance with Raghu Profile.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block" onerror="this.style.display='none'">
-  <span style="display:none;font-size:17px">FR</span>
-</div>
-      <div style="font-size:12.5px;font-weight:700;color:var(--bw);text-align:center;
-                  letter-spacing:.3px;line-height:1.35;margin-top:2px">Finance With Raghu</div>
-      <div style="font-size:9.5px;font-weight:700;color:var(--bo);background:rgba(255,107,0,.12);
-                  border:.5px solid rgba(255,107,0,.3);padding:4px 8px;border-radius:3px;letter-spacing:1px">WEALTH ADVISORY</div>
+
+    <!-- ROW 1 (4 CARDS) -->
+    <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:12px;margin-bottom:12px;flex:1">
+      <!-- Card 1: Finance With Raghu -->
+      <div style="background:var(--dc);border:0.5px solid rgba(255,107,0,0.3);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.5)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:44px;height:44px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;background:#000;flex-shrink:0;box-shadow:0 0 10px rgba(255,107,0,0.3)">
+            <img src="Proof-20260906T155032Z-1-001/Proof/Profile/raghu_avatar.png" style="width:100%;height:100%;object-fit:cover;display:block" alt="Raghu">
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:13px;font-weight:800;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Finance With Raghu</div>
+            <div style="font-size:9.5px;font-weight:700;color:var(--bo);letter-spacing:1px">WEALTH ADVISORY</div>
+          </div>
+          <div style="width:16px;height:16px;border-radius:50%;background:var(--bo);display:flex;align-items:center;justify-content:center;font-size:9px;color:#000;font-weight:900">&#10003;</div>
+        </div>
+        <div style="flex:1;min-height:0;background:#000;border-radius:5px;overflow:hidden;border:0.5px solid rgba(255,107,0,0.2);position:relative">
+          <img src="Proof-20260906T155032Z-1-001/Proof/Profile/raghu_preview.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" alt="Finance with Raghu Profile">
+        </div>
+        <div style="font-size:10px;font-weight:600;color:var(--wa);background:rgba(255,107,0,0.08);padding:5px 8px;border-radius:3px;text-align:center">
+          +45K HNW Followers &middot; Inbound Retainers
+        </div>
+      </div>
+
+      <!-- Card 2: Dr. Hariharan -->
+      <div style="background:var(--dc);border:0.5px solid rgba(255,107,0,0.3);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.5)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:44px;height:44px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;background:#000;flex-shrink:0;box-shadow:0 0 10px rgba(255,107,0,0.3)">
+            <img src="Proof-20260906T155032Z-1-001/Proof/Profile/hariharan_avatar.png" style="width:100%;height:100%;object-fit:cover;display:block" alt="Dr. Hariharan">
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:13px;font-weight:800;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Dr. Hariharan</div>
+            <div style="font-size:9.5px;font-weight:700;color:var(--bo);letter-spacing:1px">HEALTHCARE & SURGERY</div>
+          </div>
+          <div style="width:16px;height:16px;border-radius:50%;background:var(--bo);display:flex;align-items:center;justify-content:center;font-size:9px;color:#000;font-weight:900">&#10003;</div>
+        </div>
+        <div style="flex:1;min-height:0;background:#000;border-radius:5px;overflow:hidden;border:0.5px solid rgba(255,107,0,0.2);position:relative">
+          <img src="Proof-20260906T155032Z-1-001/Proof/Profile/hariharan_preview.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" alt="Dr Hariharan Profile">
+        </div>
+        <div style="font-size:10px;font-weight:600;color:var(--wa);background:rgba(255,107,0,0.08);padding:5px 8px;border-radius:3px;text-align:center">
+          Orthopedic Authority &middot; Zero Paid Ads
+        </div>
+      </div>
+
+      <!-- Card 3: White Paper House -->
+      <div style="background:var(--dc);border:0.5px solid rgba(255,107,0,0.3);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.5)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:44px;height:44px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;background:#000;flex-shrink:0;box-shadow:0 0 10px rgba(255,107,0,0.3)">
+            <img src="Proof-20260906T155032Z-1-001/Proof/Profile/whitepaper_avatar.png" style="width:100%;height:100%;object-fit:contain;display:block" alt="White Paper House">
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:13px;font-weight:800;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">White Paper House</div>
+            <div style="font-size:9.5px;font-weight:700;color:var(--bo);letter-spacing:1px">CREATIVE AGENCY</div>
+          </div>
+          <div style="width:16px;height:16px;border-radius:50%;background:var(--bo);display:flex;align-items:center;justify-content:center;font-size:9px;color:#000;font-weight:900">&#10003;</div>
+        </div>
+        <div style="flex:1;min-height:0;background:#000;border-radius:5px;overflow:hidden;border:0.5px solid rgba(255,107,0,0.2);position:relative">
+          <img src="Proof-20260906T155032Z-1-001/Proof/Profile/whitepaper_preview.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" alt="White Paper Profile">
+        </div>
+        <div style="font-size:10px;font-weight:600;color:var(--wa);background:rgba(255,107,0,0.08);padding:5px 8px;border-radius:3px;text-align:center">
+          &#8377;0 Ad Spend &middot; 100% Inbound B2B Deals
+        </div>
+      </div>
+
+      <!-- Card 4: Wedding Dhanushya -->
+      <div style="background:var(--dc);border:0.5px solid rgba(255,107,0,0.3);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,0.5)">
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:44px;height:44px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;background:#1a0800;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:900;color:var(--bo)">
+            WD
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:13px;font-weight:800;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Wedding Dhanushya</div>
+            <div style="font-size:9.5px;font-weight:700;color:var(--bo);letter-spacing:1px">LUXURY B2C</div>
+          </div>
+          <div style="width:16px;height:16px;border-radius:50%;background:var(--bo);display:flex;align-items:center;justify-content:center;font-size:9px;color:#000;font-weight:900">&#10003;</div>
+        </div>
+        <div style="flex:1;min-height:0;background:#000;border-radius:5px;overflow:hidden;border:0.5px solid rgba(255,107,0,0.2);position:relative">
+          <img src="Proof-20260906T155032Z-1-001/Proof/Profile/thoufiq_preview.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block" alt="Wedding Dhanushya Profile">
+        </div>
+        <div style="font-size:10px;font-weight:600;color:var(--wa);background:rgba(255,107,0,0.08);padding:5px 8px;border-radius:3px;text-align:center">
+          Viral Video IP &middot; Premium Client Bookings
+        </div>
+      </div>
     </div>
-    <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.25);border-radius:8px;
-                padding:18px 12px;display:flex;flex-direction:column;align-items:center;
-                gap:10px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.4)">
-      <div style="position:absolute;top:8px;right:8px;width:18px;height:18px;
-                  background:var(--bo);border-radius:50%;display:flex;align-items:center;
-                  justify-content:center;font-size:10px;color:#000;font-weight:900">&#10003;</div>
-      <div style="width:62px;height:62px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;flex-shrink:0;background:#1a0800;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:var(--bo);box-shadow:0 0 15px rgba(255,107,0,0.25)">
-  <img src="Proof-20260906T155032Z-1-001/Proof/Profile/Dr. Hariharan profile.jpg" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block" onerror="this.style.display='none'">
-  <span style="display:none;font-size:17px">DH</span>
-</div>
-      <div style="font-size:12.5px;font-weight:700;color:var(--bw);text-align:center;
-                  letter-spacing:.3px;line-height:1.35;margin-top:2px">Dr. Hariharan</div>
-      <div style="font-size:9.5px;font-weight:700;color:var(--bo);background:rgba(255,107,0,.12);
-                  border:.5px solid rgba(255,107,0,.3);padding:4px 8px;border-radius:3px;letter-spacing:1px">HEALTHCARE</div>
-    </div>
-    <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.25);border-radius:8px;
-                padding:18px 12px;display:flex;flex-direction:column;align-items:center;
-                gap:10px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.4)">
-      <div style="position:absolute;top:8px;right:8px;width:18px;height:18px;
-                  background:var(--bo);border-radius:50%;display:flex;align-items:center;
-                  justify-content:center;font-size:10px;color:#000;font-weight:900">&#10003;</div>
-      <div style="width:62px;height:62px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;flex-shrink:0;background:#1a0800;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:var(--bo);box-shadow:0 0 15px rgba(255,107,0,0.25)">
-  
-  <span style="font-size:17px">NK</span>
-</div>
-      <div style="font-size:12.5px;font-weight:700;color:var(--bw);text-align:center;
-                  letter-spacing:.3px;line-height:1.35;margin-top:2px">Nuke Code</div>
-      <div style="font-size:9.5px;font-weight:700;color:var(--bo);background:rgba(255,107,0,.12);
-                  border:.5px solid rgba(255,107,0,.3);padding:4px 8px;border-radius:3px;letter-spacing:1px">AI SYSTEMS</div>
-    </div>
-    <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.25);border-radius:8px;
-                padding:18px 12px;display:flex;flex-direction:column;align-items:center;
-                gap:10px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.4)">
-      <div style="position:absolute;top:8px;right:8px;width:18px;height:18px;
-                  background:var(--bo);border-radius:50%;display:flex;align-items:center;
-                  justify-content:center;font-size:10px;color:#000;font-weight:900">&#10003;</div>
-      <div style="width:62px;height:62px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;flex-shrink:0;background:#1a0800;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:var(--bo);box-shadow:0 0 15px rgba(255,107,0,0.25)">
-  <img src="Proof-20260906T155032Z-1-001/Proof/Profile/White Paper Production.jpeg" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block" onerror="this.style.display='none'">
-  <span style="display:none;font-size:17px">WP</span>
-</div>
-      <div style="font-size:12.5px;font-weight:700;color:var(--bw);text-align:center;
-                  letter-spacing:.3px;line-height:1.35;margin-top:2px">White Paper House</div>
-      <div style="font-size:9.5px;font-weight:700;color:var(--bo);background:rgba(255,107,0,.12);
-                  border:.5px solid rgba(255,107,0,.3);padding:4px 8px;border-radius:3px;letter-spacing:1px">MEDIA AGENCY</div>
-    </div>
-    <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.25);border-radius:8px;
-                padding:18px 12px;display:flex;flex-direction:column;align-items:center;
-                gap:10px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.4)">
-      <div style="position:absolute;top:8px;right:8px;width:18px;height:18px;
-                  background:var(--bo);border-radius:50%;display:flex;align-items:center;
-                  justify-content:center;font-size:10px;color:#000;font-weight:900">&#10003;</div>
-      <div style="width:62px;height:62px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;flex-shrink:0;background:#1a0800;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:var(--bo);box-shadow:0 0 15px rgba(255,107,0,0.25)">
-  
-  <span style="font-size:17px">WD</span>
-</div>
-      <div style="font-size:12.5px;font-weight:700;color:var(--bw);text-align:center;
-                  letter-spacing:.3px;line-height:1.35;margin-top:2px">Wedding Dhanushya</div>
-      <div style="font-size:9.5px;font-weight:700;color:var(--bo);background:rgba(255,107,0,.12);
-                  border:.5px solid rgba(255,107,0,.3);padding:4px 8px;border-radius:3px;letter-spacing:1px">LUXURY B2C</div>
-    </div>
-    <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.25);border-radius:8px;
-                padding:18px 12px;display:flex;flex-direction:column;align-items:center;
-                gap:10px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.4)">
-      <div style="position:absolute;top:8px;right:8px;width:18px;height:18px;
-                  background:var(--bo);border-radius:50%;display:flex;align-items:center;
-                  justify-content:center;font-size:10px;color:#000;font-weight:900">&#10003;</div>
-      <div style="width:62px;height:62px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;flex-shrink:0;background:#1a0800;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:var(--bo);box-shadow:0 0 15px rgba(255,107,0,0.25)">
-  
-  <span style="font-size:17px">SR</span>
-</div>
-      <div style="font-size:12.5px;font-weight:700;color:var(--bw);text-align:center;
-                  letter-spacing:.3px;line-height:1.35;margin-top:2px">Sarathi</div>
-      <div style="font-size:9.5px;font-weight:700;color:var(--bo);background:rgba(255,107,0,.12);
-                  border:.5px solid rgba(255,107,0,.3);padding:4px 8px;border-radius:3px;letter-spacing:1px">TECH SAAS</div>
-    </div>
-    <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.25);border-radius:8px;
-                padding:18px 12px;display:flex;flex-direction:column;align-items:center;
-                gap:10px;position:relative;box-shadow:0 4px 16px rgba(0,0,0,.4)">
-      <div style="position:absolute;top:8px;right:8px;width:18px;height:18px;
-                  background:var(--bo);border-radius:50%;display:flex;align-items:center;
-                  justify-content:center;font-size:10px;color:#000;font-weight:900">&#10003;</div>
-      <div style="width:62px;height:62px;border-radius:50%;border:2px solid var(--bo);overflow:hidden;flex-shrink:0;background:#1a0800;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:800;color:var(--bo);box-shadow:0 0 15px rgba(255,107,0,0.25)">
-  
-  <span style="font-size:17px">DP</span>
-</div>
-      <div style="font-size:12.5px;font-weight:700;color:var(--bw);text-align:center;
-                  letter-spacing:.3px;line-height:1.35;margin-top:2px">Deepan</div>
-      <div style="font-size:9.5px;font-weight:700;color:var(--bo);background:rgba(255,107,0,.12);
-                  border:.5px solid rgba(255,107,0,.3);padding:4px 8px;border-radius:3px;letter-spacing:1px">ENTERPRISE B2B</div>
-    </div>
+
+    <!-- ROW 2 (3 CARDS) -->
+    <div style="display:grid;grid-template-columns:repeat(3, 1fr);gap:12px;flex:0.85">
+      <!-- Card 5: Nuke Code -->
+      <div style="background:var(--dc);border:0.5px solid rgba(255,107,0,0.3);border-radius:8px;padding:12px 16px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(0,0,0,0.5)">
+        <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bo);background:#1a0800;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:var(--bo);box-shadow:0 0 12px rgba(255,107,0,0.3)">
+          NK
+        </div>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px">
+            <span style="font-size:14px;font-weight:800;color:#fff">Nuke Code</span>
+            <span style="color:var(--bo);font-size:11px">&#10003;</span>
+          </div>
+          <div style="font-size:10px;font-weight:700;color:var(--bo);letter-spacing:1px;margin:2px 0 4px">AI SYSTEMS & AUTOMATION</div>
+          <div style="font-size:11.5px;color:var(--gm);line-height:1.4">Founder-led media scaled pipeline for enterprise AI implementation contracts.</div>
+        </div>
+        <div style="text-align:right;border-left:1px solid rgba(255,107,0,0.2);padding-left:12px">
+          <div style="font-size:18px;font-weight:900;color:var(--bo)">100%</div>
+          <div style="font-size:9.5px;color:#888;font-weight:600">INBOUND B2B</div>
+        </div>
+      </div>
+
+      <!-- Card 6: Sarathi -->
+      <div style="background:var(--dc);border:0.5px solid rgba(255,107,0,0.3);border-radius:8px;padding:12px 16px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(0,0,0,0.5)">
+        <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bo);background:#1a0800;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:var(--bo);box-shadow:0 0 12px rgba(255,107,0,0.3)">
+          SR
+        </div>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px">
+            <span style="font-size:14px;font-weight:800;color:#fff">Sarathi</span>
+            <span style="color:var(--bo);font-size:11px">&#10003;</span>
+          </div>
+          <div style="font-size:10px;font-weight:700;color:var(--bo);letter-spacing:1px;margin:2px 0 4px">TECH SAAS & PLATFORMS</div>
+          <div style="font-size:11.5px;color:var(--gm);line-height:1.4">Turnkey founder video engine replacing high-churn outbound SDR sales reps.</div>
+        </div>
+        <div style="text-align:right;border-left:1px solid rgba(255,107,0,0.2);padding-left:12px">
+          <div style="font-size:18px;font-weight:900;color:var(--bo)">2 hrs</div>
+          <div style="font-size:9.5px;color:#888;font-weight:600">WEEKLY LOAD</div>
+        </div>
+      </div>
+
+      <!-- Card 7: Deepan -->
+      <div style="background:var(--dc);border:0.5px solid rgba(255,107,0,0.3);border-radius:8px;padding:12px 16px;display:flex;align-items:center;gap:14px;box-shadow:0 4px 16px rgba(0,0,0,0.5)">
+        <div style="width:52px;height:52px;border-radius:50%;border:2px solid var(--bo);background:#1a0800;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:var(--bo);box-shadow:0 0 12px rgba(255,107,0,0.3)">
+          DP
+        </div>
+        <div style="flex:1;min-width:0">
+          <div style="display:flex;align-items:center;gap:6px">
+            <span style="font-size:14px;font-weight:800;color:#fff">Deepan</span>
+            <span style="color:var(--bo);font-size:11px">&#10003;</span>
+          </div>
+          <div style="font-size:10px;font-weight:700;color:var(--bo);letter-spacing:1px;margin:2px 0 4px">ENTERPRISE B2B ADVISORY</div>
+          <div style="font-size:11.5px;color:var(--gm);line-height:1.4">Polarizing category thesis positioning that commands pre-sold executive retainers.</div>
+        </div>
+        <div style="text-align:right;border-left:1px solid rgba(255,107,0,0.2);padding-left:12px">
+          <div style="font-size:18px;font-weight:900;color:var(--bo)">Zero</div>
+          <div style="font-size:9.5px;color:#888;font-weight:600">COLD OUTREACH</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -584,15 +621,15 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:38px 64px 30px;z-index:2">
-    <div class="badge red" style="margin-bottom:12px">MACRO ENVIRONMENT SHIFT</div>
+  <div style="flex:1;display:flex;flex-direction:column;padding:34px 60px 24px;z-index:2">
+    <div class="badge red" style="margin-bottom:10px">MACRO ENVIRONMENT SHIFT</div>
     <h2 class="hl" style="margin-bottom:8px">
       The 1.5-Year Personal Branding Wave Is <span class="red">Dead</span>
     </h2>
     <p class="bt" style="margin-bottom:4px;font-size:15px">The early-mover window closed 18 months ago — feeds flooded with clones.</p>
     <p class="bt" style="font-size:15px">When nobody innovates, copying viral creators yields <strong style="color:var(--er)">zero organic conversion</strong>.</p>
-    <div style="flex:1;margin-top:18px;min-height:0">
-      <svg viewBox="0 0 820 240" style="width:100%;height:100%" preserveAspectRatio="none">
+    <div style="flex:1;margin-top:16px;min-height:0">
+      <svg viewBox="0 0 820 230" style="width:100%;height:100%" preserveAspectRatio="none">
         <defs>
           <linearGradient id="rg3" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#FF3D00" stop-opacity=".9"/>
@@ -602,20 +639,20 @@ svg text {
         </defs>
         <line x1="0" y1="55" x2="820" y2="55" stroke="#222" stroke-width="1"/>
         <line x1="0" y1="120" x2="820" y2="120" stroke="#222" stroke-width="1"/>
-        <line x1="0" y1="190" x2="820" y2="190" stroke="#222" stroke-width="1"/>
+        <line x1="0" y1="185" x2="820" y2="185" stroke="#222" stroke-width="1"/>
         <path d="M 0,36 C 85,25 135,16 205,20 C 285,26 325,44 400,80 C 478,118 520,158 600,195 C 674,230 720,240 820,240"
               stroke="url(#rg3)" stroke-width="3.5" fill="none" filter="url(#gl3)"/>
         <path d="M 0,36 C 85,25 135,16 205,20 C 285,26 325,44 400,80 C 478,118 520,158 600,195 C 674,230 720,240 820,240 L820,240 L0,240Z"
               fill="rgba(255,61,0,.05)"/>
         <circle cx="205" cy="20" r="6" fill="#FF6B00" filter="url(#gl3)"/>
         <text x="205" y="12" text-anchor="middle" fill="#FF6B00" font-size="13" font-weight="700" letter-spacing="1">PEAK WAVE — 2023</text>
-        <rect x="300" y="80" width="240" height="48" rx="5" fill="rgba(255,61,0,.14)" stroke="rgba(255,61,0,.45)" stroke-width="1"/>
-        <text x="420" y="101" text-anchor="middle" fill="#FF3D00" font-size="13" font-weight="700">&#9888; CLONE FLOOD ZONE</text>
-        <text x="420" y="119" text-anchor="middle" fill="#999" font-size="11.5">Feed oversaturation — zero differentiation</text>
-        <text x="680" y="226" text-anchor="middle" fill="#FF3D00" font-size="13" font-weight="700" opacity=".85">THE EXPIRED WAVE &#8595;</text>
-        <text x="28" y="234" fill="#555" font-size="12" font-weight="600">2023</text>
-        <text x="400" y="234" fill="#555" font-size="12" font-weight="600">2024</text>
-        <text x="765" y="234" fill="#555" font-size="12" font-weight="600">2026</text>
+        <rect x="300" y="78" width="240" height="48" rx="5" fill="rgba(255,61,0,.14)" stroke="rgba(255,61,0,.45)" stroke-width="1"/>
+        <text x="420" y="99" text-anchor="middle" fill="#FF3D00" font-size="13" font-weight="700">&#9888; CLONE FLOOD ZONE</text>
+        <text x="420" y="117" text-anchor="middle" fill="#999" font-size="11.5">Feed oversaturation — zero differentiation</text>
+        <text x="680" y="222" text-anchor="middle" fill="#FF3D00" font-size="13" font-weight="700" opacity=".85">THE EXPIRED WAVE &#8595;</text>
+        <text x="28" y="228" fill="#555" font-size="12" font-weight="600">2023</text>
+        <text x="400" y="228" fill="#555" font-size="12" font-weight="600">2024</text>
+        <text x="765" y="228" fill="#555" font-size="12" font-weight="600">2026</text>
       </svg>
     </div>
   </div>
@@ -632,37 +669,46 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:34px 60px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">FORMAT PLAGIARISM PROOF</div>
-    <h2 class="hl" style="margin-bottom:16px">
+  <div style="flex:1;display:flex;flex-direction:column;padding:28px 56px 22px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">FORMAT PLAGIARISM PROOF</div>
+    <h2 class="hl" style="margin-bottom:14px">
       Within <span>9 Months</span>: Signature Style Copied Across the Feed
     </h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1;min-height:0">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0">
       <div style="background:var(--dc);border:1.5px solid var(--bo);border-radius:8px;
-                  padding:18px;display:flex;flex-direction:column;gap:12px;
-                  box-shadow:0 0 30px rgba(255,107,0,.15)">
-        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--bo)">
-          &#10022; ORIGINAL — @firstselfie.in (SUREESH S)
+                  padding:14px 16px;display:flex;flex-direction:column;gap:10px;
+                  box-shadow:0 0 30px rgba(255,107,0,.15);min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--bo)">
+            &#10022; ORIGINAL — @firstselfie.in (SUREESH S)
+          </div>
+          <div class="badge" style="font-size:9.5px;padding:3px 8px">ORIGINAL CREATOR</div>
         </div>
-        <div class="mockup-frame">
+        <div style="flex:1;min-height:0;background:#080808;border-radius:6px;overflow:hidden;border:0.5px solid rgba(255,107,0,0.25);display:flex;align-items:center;justify-content:center;padding:4px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-07-04-13-17-48-984_com.instagram.android.jpg"
+               style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:4px"
                alt="Original Format">
         </div>
-        <p class="bt" style="font-size:14px">Proprietary props, black aesthetic, signature visual storytelling — engineered from day zero.</p>
+        <p class="bt" style="font-size:13.5px">Proprietary props, black aesthetic, signature visual storytelling — engineered from day zero.</p>
       </div>
+
       <div style="background:var(--dc);border:.5px solid rgba(255,61,0,.35);border-radius:8px;
-                  padding:18px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--er)">
-          &#9888; COPYCAT — IDENTICAL FORMAT REPLICATION
+                  padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-height:0">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:12px;font-weight:800;letter-spacing:1.5px;color:var(--er)">
+            &#9888; COPYCAT — IDENTICAL FORMAT REPLICATION
+          </div>
+          <div class="badge red" style="font-size:9.5px;padding:3px 8px">FEED CLONE</div>
         </div>
-        <div class="mockup-frame" style="border-color:rgba(255,61,0,.3)">
+        <div style="flex:1;min-height:0;background:#080808;border-radius:6px;overflow:hidden;border:0.5px solid rgba(255,61,0,0.25);display:flex;align-items:center;justify-content:center;padding:4px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-07-04-13-18-00-809_com.instagram.android.jpg"
+               style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:4px"
                alt="Copycat Replication">
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <div class="badge red" style="font-size:10px;padding:4px 10px">SAME PROPS</div>
-          <div class="badge red" style="font-size:10px;padding:4px 10px">SAME PACING</div>
-          <div class="badge red" style="font-size:10px;padding:4px 10px">SAME AESTHETIC</div>
+          <div class="badge red" style="font-size:9.5px;padding:3px 8px">SAME PROPS</div>
+          <div class="badge red" style="font-size:9.5px;padding:3px 8px">SAME PACING</div>
+          <div class="badge red" style="font-size:9.5px;padding:3px 8px">SAME AESTHETIC</div>
         </div>
       </div>
     </div>
@@ -680,33 +726,33 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 60px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">STRATEGIC DECISION MATRIX</div>
-    <h2 class="hl" style="margin-bottom:16px">The Choice: <span>Category Leader</span> or Feed Filler?</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1;min-height:0">
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 24px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">STRATEGIC DECISION MATRIX</div>
+    <h2 class="hl" style="margin-bottom:14px">The Choice: <span>Category Leader</span> or Feed Filler?</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1;min-height:0">
       <div style="background:var(--dc);border:.5px solid #282828;border-radius:8px;
-                  padding:28px;display:flex;flex-direction:column;gap:14px;opacity:.7">
+                  padding:26px;display:flex;flex-direction:column;gap:14px;opacity:.7">
         <div style="font-size:19px;font-weight:800;color:var(--gm)">Commodity Copycat
           <div style="font-size:13px;font-weight:400;color:#555;margin-top:4px">High Churn · Zero Equity</div>
         </div>
         <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Borrows formats, gets forgotten</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Algorithm-dependent, no moat</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Invisible when trend pivots</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Competes on quantity, never quality</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; No proprietary visual IP</div>
+        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Algorithm-dependent, zero proprietary moat</div>
+        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Invisible when feed trend pivots</div>
+        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Competes on volume, never on pricing power</div>
+        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; No proprietary visual intellectual property</div>
       </div>
       <div style="background:linear-gradient(135deg,rgba(255,107,0,.1),rgba(255,107,0,.02));
-                  border:1.5px solid var(--bo);border-radius:8px;padding:28px;
+                  border:1.5px solid var(--bo);border-radius:8px;padding:26px;
                   display:flex;flex-direction:column;gap:14px;
                   box-shadow:0 0 44px rgba(255,107,0,.18),inset 0 0 44px rgba(255,107,0,.04)">
         <div style="font-size:19px;font-weight:800;color:var(--bo)">Identity Category King
           <div style="font-size:13px;font-weight:500;color:var(--wa);margin-top:4px">High Equity · Compounding Authority</div>
         </div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Engineers proprietary visual IP</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Commands the next wave, not chases it</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Inbound demand — buyers self-qualify</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Irreplaceable moat across cycles</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Category defines the format standard</div>
+        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Engineers proprietary visual IP from day zero</div>
+        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Commands the next wave instead of chasing it</div>
+        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Inbound high-ticket demand — buyers self-qualify</div>
+        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Irreplaceable moat that outlasts algorithm updates</div>
+        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Category defines the format standard in the industry</div>
       </div>
     </div>
   </div>
@@ -723,38 +769,52 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 68px;justify-content:center;z-index:2">
-    <div class="badge" style="margin-bottom:12px">B2B ENTERPRISE VALIDATION</div>
-    <h2 class="hl" style="margin-bottom:12px">
+  <div style="flex:1;display:flex;flex-direction:column;padding:28px 56px 22px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">B2B ENTERPRISE VALIDATION</div>
+    <h2 class="hl" style="margin-bottom:14px">
       Even Creative Agencies Outsource<br><span>Founder Authority</span> to Us
     </h2>
-    <p class="bt" style="max-width:680px;margin-bottom:24px;font-size:15.5px">
-      Agencies build client brands daily, yet struggle to scale their own founder moats.
-      We engineer internal distribution systems that convert attention into enterprise retainers.
-    </p>
-    <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.26);border-radius:10px;
-                padding:32px 44px;display:grid;grid-template-columns:1.2fr 1fr 1fr;
-                gap:32px;align-items:center;box-shadow:0 6px 30px rgba(0,0,0,.5)">
-      <div style="display:flex;flex-direction:column;gap:12px">
-        <div style="width:90px;height:90px;border-radius:8px;overflow:hidden;
-                    border:1px solid rgba(255,107,0,.35);background:#000;display:flex;align-items:center;justify-content:center">
-          <img src="Proof-20260906T155032Z-1-001/Proof/Profile/White Paper Production.jpeg"
-               style="max-width:100%;max-height:100%;object-fit:contain;display:block"
-               onerror="this.style.display='none'">
+    <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:24px;flex:1;min-height:0">
+      <!-- Left: Story & Stats -->
+      <div style="display:flex;flex-direction:column;justify-content:space-between;gap:16px">
+        <div class="card" style="padding:22px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <img src="Proof-20260906T155032Z-1-001/Proof/Profile/whitepaper_avatar.png" style="width:48px;height:48px;border-radius:50%;border:1.5px solid var(--bo);background:#000" alt="White Paper House">
+            <div>
+              <div style="font-size:18px;font-weight:800;color:#fff">White Paper House Agency</div>
+              <div class="badge" style="font-size:9.5px;padding:2px 8px;margin-top:2px">ENTERPRISE CASE STUDY</div>
+            </div>
+          </div>
+          <p class="bt" style="font-size:14.5px;line-height:1.6">
+            A premier creative media production agency producing 50+ client brands annually, yet struggling to scale their own internal founder distribution moat.
+          </p>
+          <p class="bt" style="font-size:14.5px;line-height:1.6">
+            We installed an autonomous, asynchronous founder engine that turned founder expertise into direct enterprise retainers.
+          </p>
         </div>
-        <div style="font-size:20px;font-weight:800;color:var(--bw);line-height:1.2">White Paper House Agency</div>
-        <div class="badge" style="align-self:flex-start;font-size:10px;padding:4px 10px">CASE STUDY</div>
-        <p class="bt" style="font-size:13.5px">Creative agency unable to scale own founder visibility despite building 50+ client brands annually.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div class="card" style="text-align:center;padding:18px;background:linear-gradient(135deg,rgba(255,107,0,0.08),rgba(20,20,20,0.9))">
+            <div style="font-size:46px;font-weight:900;color:var(--bo);letter-spacing:-1.5px;line-height:1">&#8377;0</div>
+            <div style="font-size:11.5px;font-weight:700;color:var(--gm);letter-spacing:1px;margin-top:6px">AD SPEND REQUIRED</div>
+          </div>
+          <div class="card" style="text-align:center;padding:18px;background:linear-gradient(135deg,rgba(255,107,0,0.08),rgba(20,20,20,0.9))">
+            <div style="font-size:46px;font-weight:900;color:var(--bo);letter-spacing:-1.5px;line-height:1">100%</div>
+            <div style="font-size:11.5px;font-weight:700;color:var(--gm);letter-spacing:1px;margin-top:6px">INBOUND B2B RETAINERS</div>
+          </div>
+        </div>
       </div>
-      <div style="display:flex;flex-direction:column;align-items:center;
-                  border-left:1px solid rgba(255,107,0,.15);padding-left:32px;gap:8px">
-        <div style="font-size:54px;font-weight:900;color:var(--bo);letter-spacing:-2px">&#8377;0</div>
-        <div style="font-size:12px;font-weight:700;color:var(--gm);letter-spacing:1.5px;text-align:center">AD SPEND REQUIRED</div>
-      </div>
-      <div style="display:flex;flex-direction:column;align-items:center;
-                  border-left:1px solid rgba(255,107,0,.15);padding-left:32px;gap:8px">
-        <div style="font-size:54px;font-weight:900;color:var(--bo);letter-spacing:-2px">100%</div>
-        <div style="font-size:12px;font-weight:700;color:var(--gm);letter-spacing:1.5px;text-align:center">INBOUND B2B RETAINERS</div>
+
+      <!-- Right: Large, Clear Mobile Proof -->
+      <div style="background:var(--dc);border:1px solid rgba(255,107,0,0.3);border-radius:8px;padding:12px;display:flex;flex-direction:column;gap:8px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.6)">
+        <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;color:var(--bo);display:flex;align-items:center;gap:6px">
+          <span>&#10022; VERIFIED PRODUCTION PROFILE</span>
+        </div>
+        <div style="flex:1;min-height:0;background:#000;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:2px">
+          <img src="Proof-20260906T155032Z-1-001/Proof/Profile/White Paper Production.jpeg"
+               style="max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:4px"
+               alt="White Paper House Production">
+        </div>
       </div>
     </div>
   </div>
@@ -771,33 +831,56 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 60px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">PROPRIETARY METHODOLOGY</div>
-    <h2 class="hl" style="margin-bottom:18px">The <span>3-Star Framework</span>: Engineered Founder Authority</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px;flex:1;min-height:0">
-      <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.26);border-radius:8px;
-                  padding:26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 4px 20px rgba(0,0,0,.4)">
-        <div style="font-size:62px;font-weight:900;color:var(--bo);letter-spacing:-3px;line-height:1;
-                    text-shadow:0 0 30px rgba(255,107,0,.4)">01</div>
-        <div style="font-size:20px;font-weight:800;color:var(--bw)">Creator Codex</div>
-        <div class="badge" style="align-self:flex-start;font-size:10px;padding:3px 10px">PILLAR 01</div>
-        <p class="bt" style="font-size:14.5px">Extracting and solidifying uncopyable identity, polarizing thesis, and signature visual vocabulary. The core blueprint.</p>
+  <div style="flex:1;display:flex;flex-direction:column;padding:28px 56px 22px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">PROPRIETARY METHODOLOGY</div>
+    <h2 class="hl" style="margin-bottom:14px">The <span>3-Star Framework</span>: Engineered Founder Authority</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;flex:1;min-height:0">
+      <div class="card" style="padding:20px;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:46px;font-weight:900;color:var(--bo);letter-spacing:-2px;line-height:1">01</div>
+          <div class="badge" style="font-size:9.5px;padding:3px 8px">PILLAR 01</div>
+        </div>
+        <div style="font-size:18px;font-weight:800;color:var(--bw)">Creator Codex</div>
+        <p class="bt" style="font-size:13px;line-height:1.5">Extracting and solidifying your uncopyable identity, polarizing thesis, and signature visual IP.</p>
+        <div style="border-top:1px solid rgba(255,107,0,0.15);padding-top:10px;margin-top:auto;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11.5px;font-weight:700;color:var(--wa)">Deliverables Installed:</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; Core Identity &amp; Moat Extraction</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; Signature Visual Studio Kit</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; Polarizing Category Thesis</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; 10 Batch Script Blueprints</div>
+        </div>
       </div>
-      <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.26);border-radius:8px;
-                  padding:26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 4px 20px rgba(0,0,0,.4)">
-        <div style="font-size:62px;font-weight:900;color:var(--bo);letter-spacing:-3px;line-height:1;
-                    text-shadow:0 0 30px rgba(255,107,0,.4)">02</div>
-        <div style="font-size:20px;font-weight:800;color:var(--bw)">Brain-First Engine</div>
-        <div class="badge" style="align-self:flex-start;font-size:10px;padding:3px 10px">PILLAR 02</div>
-        <p class="bt" style="font-size:14.5px">The operational production engine. Compressing 3 hours into 2 hours per team, sustaining daily output with zero creative burnout.</p>
+
+      <div class="card" style="padding:20px;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:46px;font-weight:900;color:var(--bo);letter-spacing:-2px;line-height:1">02</div>
+          <div class="badge" style="font-size:9.5px;padding:3px 8px">PILLAR 02</div>
+        </div>
+        <div style="font-size:18px;font-weight:800;color:var(--bw)">Brain-First Engine</div>
+        <p class="bt" style="font-size:13px;line-height:1.5">The high-frequency production engine. Compressing 3 hours into 2 hours per team, sustaining daily output with zero burnout.</p>
+        <div style="border-top:1px solid rgba(255,107,0,0.15);padding-top:10px;margin-top:auto;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11.5px;font-weight:700;color:var(--wa)">Deliverables Installed:</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; 10-Min Interview Extraction</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; Autonomous Editing Protocol</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; Multi-Platform Syndication</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; 30 Monthly Organic Assets</div>
+        </div>
       </div>
-      <div style="background:var(--dc);border:.5px solid rgba(255,107,0,.26);border-radius:8px;
-                  padding:26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 4px 20px rgba(0,0,0,.4)">
-        <div style="font-size:62px;font-weight:900;color:var(--bo);letter-spacing:-3px;line-height:1;
-                    text-shadow:0 0 30px rgba(255,107,0,.4)">03</div>
-        <div style="font-size:20px;font-weight:800;color:var(--bw)">APA Matrix</div>
-        <div class="badge" style="align-self:flex-start;font-size:10px;padding:3px 10px">PILLAR 03</div>
-        <p class="bt" style="font-size:14.5px">Audience &middot; Pipeline &middot; Authority. Precision metrics over guesswork. Transforming algorithmic views into high-ticket inbound pipeline.</p>
+
+      <div class="card" style="padding:20px;display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:46px;font-weight:900;color:var(--bo);letter-spacing:-2px;line-height:1">03</div>
+          <div class="badge" style="font-size:9.5px;padding:3px 8px">PILLAR 03</div>
+        </div>
+        <div style="font-size:18px;font-weight:800;color:var(--bw)">APA Matrix</div>
+        <p class="bt" style="font-size:13px;line-height:1.5">Audience &middot; Pipeline &middot; Authority. Precision mathematics over guesswork. Transforming views into high-ticket inbound deal flow.</p>
+        <div style="border-top:1px solid rgba(255,107,0,0.15);padding-top:10px;margin-top:auto;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:11.5px;font-weight:700;color:var(--wa)">Deliverables Installed:</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; 84%+ Hook Hold Rate Optimization</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; Systematic Inbound DM Triggers</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; Retention Drop-Off Analytics</div>
+          <div class="bt" style="font-size:12px">&#10003;&nbsp; Predictable Retainer Pipeline</div>
+        </div>
       </div>
     </div>
   </div>
@@ -814,42 +897,44 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 64px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">TARGET AUDIENCE CRITERIA</div>
-    <h2 class="hl" style="margin-bottom:18px">Who This Is For: <span>The Identity Brand Builder</span></h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1;min-height:0">
-      <div class="card" style="display:flex;flex-direction:column;gap:14px;padding:26px">
-        <div style="font-size:18px;font-weight:800;color:var(--bw)">The High-Ticket Consultant</div>
-        <p class="bt" style="font-size:14.5px">Founders whose services command high-ticket fees, requiring immediate, unquestioned trust before discovery calls take place.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <div class="badge" style="font-size:10px;padding:3px 10px">ENTERPRISE ADVISORY</div>
-          <div class="badge" style="font-size:10px;padding:3px 10px">B2B STRATEGY</div>
+  <div style="flex:1;display:flex;flex-direction:column;padding:28px 56px 22px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">TARGET AUDIENCE CRITERIA</div>
+    <h2 class="hl" style="margin-bottom:14px">Who This Is For: <span>The Identity Brand Builder</span></h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0">
+      <div class="card" style="padding:18px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:17px;font-weight:800;color:var(--bw)">The High-Ticket Consultant</div>
+          <div class="badge" style="font-size:9.5px;padding:3px 8px">&#8377;50L–&#8377;5Cr TIER</div>
         </div>
+        <p class="bt" style="font-size:13.5px">Founders whose services command enterprise fees, requiring immediate, unquestioned authority before discovery calls take place.</p>
+        <div class="bt" style="font-size:12.5px;margin-top:auto">&#10003;&nbsp; Pre-sells prospects on ideology &middot; Eliminates objection handling on calls.</div>
       </div>
-      <div class="card" style="display:flex;flex-direction:column;gap:14px;padding:26px">
-        <div style="font-size:18px;font-weight:800;color:var(--bw)">The Deep-Domain Specialist</div>
-        <p class="bt" style="font-size:14.5px">Doctors, financial advisors, agency owners with deep technical expertise who refuse to dance on camera or churn out cringe trends.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <div class="badge" style="font-size:10px;padding:3px 10px">WEALTH</div>
-          <div class="badge" style="font-size:10px;padding:3px 10px">HEALTHCARE</div>
-          <div class="badge" style="font-size:10px;padding:3px 10px">AGENCY</div>
+
+      <div class="card" style="padding:18px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:17px;font-weight:800;color:var(--bw)">The Deep-Domain Specialist</div>
+          <div class="badge" style="font-size:9.5px;padding:3px 8px">SPECIALISTS</div>
         </div>
+        <p class="bt" style="font-size:13.5px">Doctors, financial advisors, agency owners with deep technical expertise who refuse to dance on camera or churn out cringe trends.</p>
+        <div class="bt" style="font-size:12.5px;margin-top:auto">&#10003;&nbsp; Institutional authority positioning &middot; Zero gimmick content.</div>
       </div>
-      <div class="card" style="display:flex;flex-direction:column;gap:14px;padding:26px">
-        <div style="font-size:18px;font-weight:800;color:var(--bw)">The Scaled Operator</div>
-        <p class="bt" style="font-size:14.5px">Leaders with real teams and cash flow who need founder-led distribution built as a predictable asset, not a chaotic side hobby.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <div class="badge" style="font-size:10px;padding:3px 10px">SYSTEMS-FIRST</div>
-          <div class="badge" style="font-size:10px;padding:3px 10px">DELEGATED ENGINE</div>
+
+      <div class="card" style="padding:18px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:17px;font-weight:800;color:var(--bw)">The Scaled Operator</div>
+          <div class="badge" style="font-size:9.5px;padding:3px 8px">SYSTEMS-FIRST</div>
         </div>
+        <p class="bt" style="font-size:13.5px">Leaders with real teams and cash flow who need founder-led distribution built as an institutional media asset, not a chaotic side hobby.</p>
+        <div class="bt" style="font-size:12.5px;margin-top:auto">&#10003;&nbsp; Turnkey 2 hrs/week commitment &middot; Autonomous delegated editing backend.</div>
       </div>
-      <div class="card" style="display:flex;flex-direction:column;gap:14px;padding:26px">
-        <div style="font-size:18px;font-weight:800;color:var(--bw)">The Uncopyable Category Leader</div>
-        <p class="bt" style="font-size:14.5px">Those who understand that attention without positioning is vanity — and are ready to own an irreplaceable intellectual category.</p>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <div class="badge" style="font-size:10px;padding:3px 10px">CATEGORY KING</div>
-          <div class="badge" style="font-size:10px;padding:3px 10px">COMPOUNDING IP</div>
+
+      <div class="card" style="padding:18px;display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div style="font-size:17px;font-weight:800;color:var(--bw)">The Category King</div>
+          <div class="badge" style="font-size:9.5px;padding:3px 8px">COMPOUNDING IP</div>
         </div>
+        <p class="bt" style="font-size:13.5px">Those who understand that attention without positioning is vanity — and are ready to own an uncopyable, compounding category moat.</p>
+        <div class="bt" style="font-size:12.5px;margin-top:auto">&#10003;&nbsp; Proprietary visual vocabulary &middot; Commands category pricing power.</div>
       </div>
     </div>
   </div>
@@ -866,10 +951,10 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 64px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">LONG-TERM STRATEGY</div>
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 60px 24px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">LONG-TERM STRATEGY</div>
     <h2 class="hl" style="margin-bottom:8px">Built for Founders Playing the <span>Multi-Year Infinite Game</span></h2>
-    <p class="bt" style="margin-bottom:18px;font-size:15px">
+    <p class="bt" style="margin-bottom:16px;font-size:15px">
       Quick-hack trends burn out in 60 days. Identity Brands compound equity that survives every algorithmic shift.
     </p>
     <div style="flex:1;min-height:0">
@@ -881,21 +966,21 @@ svg text {
           </linearGradient>
           <filter id="gli"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
         </defs>
-        <line x1="0" y1="190" x2="820" y2="190" stroke="#252525" stroke-width="1"/>
+        <line x1="0" y1="185" x2="820" y2="185" stroke="#252525" stroke-width="1"/>
         <line x1="0" y1="110" x2="820" y2="110" stroke="#252525" stroke-width="1"/>
         <line x1="0" y1="30"  x2="820" y2="30"  stroke="#252525" stroke-width="1"/>
-        <path d="M 0,185 C 100,120 180,60 260,80 C 340,100 400,160 500,170 C 600,180 720,185 820,188"
+        <path d="M 0,180 C 100,120 180,60 260,80 C 340,100 400,160 500,170 C 600,180 720,185 820,188"
               stroke="#FF3D00" stroke-width="2.5" stroke-dasharray="6,4" fill="none" opacity=".8"/>
-        <path d="M 0,188 C 160,186 320,178 460,150 C 580,124 680,70 820,16"
+        <path d="M 0,185 C 160,182 320,174 460,146 C 580,120 680,66 820,16"
               stroke="url(#ig)" stroke-width="4" fill="none" filter="url(#gli)"/>
-        <path d="M 0,188 C 160,186 320,178 460,150 C 580,124 680,70 820,16 L820,190 L0,190Z"
+        <path d="M 0,185 C 160,182 320,174 460,146 C 580,120 680,66 820,16 L820,185 L0,185Z"
               fill="rgba(255,107,0,.04)"/>
         <circle cx="820" cy="16" r="6" fill="#FF6B00" filter="url(#gli)"/>
         <text x="800" y="38" text-anchor="end" fill="#FF6B00" font-size="13" font-weight="700">IDENTITY BRAND: EXPONENTIAL MOAT</text>
-        <text x="400" y="180" text-anchor="middle" fill="#FF3D00" font-size="12" font-weight="600">Commodity Creator: Burnout &amp; Irrelevance &#8595;</text>
-        <text x="50"  y="204" fill="#666" font-size="12" font-weight="600">YEAR 1</text>
-        <text x="410" y="204" fill="#666" font-size="12" font-weight="600">YEAR 2</text>
-        <text x="770" y="204" fill="#666" font-size="12" font-weight="600">YEAR 3+</text>
+        <text x="400" y="174" text-anchor="middle" fill="#FF3D00" font-size="12" font-weight="600">Commodity Creator: Burnout &amp; Irrelevance &#8595;</text>
+        <text x="50"  y="200" fill="#666" font-size="12" font-weight="600">YEAR 1</text>
+        <text x="410" y="200" fill="#666" font-size="12" font-weight="600">YEAR 2</text>
+        <text x="770" y="200" fill="#666" font-size="12" font-weight="600">YEAR 3+</text>
       </svg>
     </div>
   </div>
@@ -912,31 +997,31 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 64px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">OPERATIONAL EFFICIENCY</div>
-    <h2 class="hl" style="margin-bottom:14px">Bypass the <span>6-Month, &#8377;5-Lakh</span> Trial-and-Error Trap</h2>
-    <p class="bt" style="margin-bottom:20px;font-size:15px">
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 60px 24px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">OPERATIONAL EFFICIENCY</div>
+    <h2 class="hl" style="margin-bottom:12px">Bypass the <span>6-Month, &#8377;5-Lakh</span> Trial-and-Error Trap</h2>
+    <p class="bt" style="margin-bottom:18px;font-size:15px">
       Most founders burn months of runway testing freelancers, bad editors, and random agencies. We eliminate the entire learning curve.
     </p>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px;flex:1;min-height:0">
       <div style="background:var(--dc);border:.5px solid rgba(255,61,0,.35);border-radius:8px;
-                  padding:26px;display:flex;flex-direction:column;gap:14px">
+                  padding:24px;display:flex;flex-direction:column;gap:12px">
         <div style="font-size:18px;font-weight:800;color:var(--er)">The Costly DIY Route</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; 6+ months testing disconnected video editors</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; &#8377;3–5 Lakhs spent on gear, courses, and wasted retainers</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; 100+ hours spent editing instead of leading your company</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Constant camera anxiety and zero clear framework</div>
-        <div class="bt" style="font-size:14.5px">&#10007;&nbsp; Churning content with zero inbound inquiries to show for it</div>
+        <div class="bt" style="font-size:14px">&#10007;&nbsp; 6+ months testing disconnected video editors</div>
+        <div class="bt" style="font-size:14px">&#10007;&nbsp; &#8377;3–5 Lakhs spent on gear, courses, and wasted retainers</div>
+        <div class="bt" style="font-size:14px">&#10007;&nbsp; 100+ hours spent editing instead of leading your company</div>
+        <div class="bt" style="font-size:14px">&#10007;&nbsp; Constant camera anxiety and zero clear framework</div>
+        <div class="bt" style="font-size:14px">&#10007;&nbsp; Churning content with zero inbound inquiries to show for it</div>
       </div>
       <div style="background:linear-gradient(135deg,rgba(255,107,0,.08),rgba(255,107,0,.02));
-                  border:1.5px solid var(--bo);border-radius:8px;padding:26px;
-                  display:flex;flex-direction:column;gap:14px;box-shadow:0 0 35px rgba(255,107,0,.15)">
+                  border:1.5px solid var(--bo);border-radius:8px;padding:24px;
+                  display:flex;flex-direction:column;gap:12px;box-shadow:0 0 35px rgba(255,107,0,.15)">
         <div style="font-size:18px;font-weight:800;color:var(--bo)">The FirstSelfie Turnkey Engine</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Day 1: Identity Codex blueprints your entire positioning</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Zero operational load — we manage scripting, edits, and distribution</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Founder time commitment: just 2 hours per week total</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Proprietary visual language engineered for instant recognition</div>
-        <div style="color:var(--bw);font-size:14.5px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Direct inbound pipeline from day 30 onwards</div>
+        <div style="color:var(--bw);font-size:14px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Day 1: Identity Codex blueprints your entire positioning</div>
+        <div style="color:var(--bw);font-size:14px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Zero operational load — we manage scripting, edits, and distribution</div>
+        <div style="color:var(--bw);font-size:14px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Founder time commitment: just 2 hours per week total</div>
+        <div style="color:var(--bw);font-size:14px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Proprietary visual language engineered for instant recognition</div>
+        <div style="color:var(--bw);font-size:14px"><span style="color:var(--bo);font-weight:bold">&#10022;&nbsp;</span>Direct inbound pipeline from day 30 onwards</div>
       </div>
     </div>
   </div>
@@ -953,33 +1038,27 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 64px 28px;z-index:2">
-    <div class="badge red" style="margin-bottom:10px">"TOO BUSY" IS A POSITIONING FAILURE</div>
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 60px 24px;z-index:2">
+    <div class="badge red" style="margin-bottom:8px">"TOO BUSY" IS A POSITIONING FAILURE</div>
     <h2 class="hl" style="margin-bottom:8px">
       &#8220;Too Busy&#8221; Is a <span class="red">Positioning Failure</span>, Not a Time Deficit
     </h2>
-    <p class="bt" style="margin-bottom:18px;font-size:15px">
+    <p class="bt" style="margin-bottom:16px;font-size:15px">
       When your content directly produces 7-figure enterprise deal flow, founder-led media ceases to be an expense — it becomes the highest-leverage priority.
     </p>
     <div style="flex:1;min-height:0">
-      <svg viewBox="0 0 820 210" style="width:100%;height:100%" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="pg" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stop-color="#FF3D00"/>
-            <stop offset="100%" stop-color="#FF6B00"/>
-          </linearGradient>
-        </defs>
-        <rect x="60" y="30" width="320" height="150" rx="8" fill="#161616" stroke="rgba(255,61,0,.3)" stroke-width="1"/>
-        <text x="220" y="65" text-anchor="middle" fill="#FF3D00" font-size="14" font-weight="700">LOW-LEVERAGE "BUSY"</text>
-        <text x="220" y="95" text-anchor="middle" fill="#999" font-size="12.5">Manual outbound, client firefighting,</text>
-        <text x="220" y="115" text-anchor="middle" fill="#999" font-size="12.5">unrepeatable sales calls, and chasing leads.</text>
-        <text x="220" y="150" text-anchor="middle" fill="#666" font-size="12">Result: Trapped in daily execution</text>
-        <text x="410" y="110" text-anchor="middle" fill="#FF6B00" font-size="28" font-weight="800">&#8594;</text>
-        <rect x="440" y="30" width="320" height="150" rx="8" fill="rgba(255,107,0,.08)" stroke="#FF6B00" stroke-width="1.5"/>
-        <text x="600" y="65" text-anchor="middle" fill="#FF6B00" font-size="14" font-weight="800">HIGH-LEVERAGE AUTHORITY</text>
-        <text x="600" y="95" text-anchor="middle" fill="#FFFFFF" font-size="12.5">2 hrs/week filming engineered assets,</text>
-        <text x="600" y="115" text-anchor="middle" fill="#FFFFFF" font-size="12.5">inbound clients pre-sold on vision,</text>
-        <text x="600" y="150" text-anchor="middle" fill="#FF9A3C" font-size="12" font-weight="700">Result: Compounding founder moat</text>
+      <svg viewBox="0 0 820 200" style="width:100%;height:100%" preserveAspectRatio="none">
+        <rect x="60" y="25" width="320" height="150" rx="8" fill="#161616" stroke="rgba(255,61,0,.3)" stroke-width="1"/>
+        <text x="220" y="60" text-anchor="middle" fill="#FF3D00" font-size="14" font-weight="700">LOW-LEVERAGE "BUSY"</text>
+        <text x="220" y="90" text-anchor="middle" fill="#999" font-size="12.5">Manual outbound, client firefighting,</text>
+        <text x="220" y="110" text-anchor="middle" fill="#999" font-size="12.5">unrepeatable sales calls, and chasing leads.</text>
+        <text x="220" y="145" text-anchor="middle" fill="#666" font-size="12">Result: Trapped in daily execution</text>
+        <text x="410" y="105" text-anchor="middle" fill="#FF6B00" font-size="28" font-weight="800">&#8594;</text>
+        <rect x="440" y="25" width="320" height="150" rx="8" fill="rgba(255,107,0,.08)" stroke="#FF6B00" stroke-width="1.5"/>
+        <text x="600" y="60" text-anchor="middle" fill="#FF6B00" font-size="14" font-weight="800">HIGH-LEVERAGE AUTHORITY</text>
+        <text x="600" y="90" text-anchor="middle" fill="#FFFFFF" font-size="12.5">2 hrs/week filming engineered assets,</text>
+        <text x="600" y="110" text-anchor="middle" fill="#FFFFFF" font-size="12.5">inbound clients pre-sold on vision,</text>
+        <text x="600" y="145" text-anchor="middle" fill="#FF9A3C" font-size="12" font-weight="700">Result: Compounding founder moat</text>
       </svg>
     </div>
   </div>
@@ -996,11 +1075,11 @@ svg text {
 </div>
     <div class="hud"><div class="hi on"><div class="hd"></div>01 CODEX</div><div class="hi"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:34px 56px 24px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 22px;
               margin-right:60px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">GROUND TRUTHS</div>
-    <h2 class="hl" style="margin-bottom:14px">Zero Overnight Virality: <span>Surviving the Creator Valley</span></h2>
-    <p class="bt" style="margin-bottom:18px;font-size:15px">
+    <div class="badge" style="margin-bottom:8px">GROUND TRUTHS</div>
+    <h2 class="hl" style="margin-bottom:12px">Zero Overnight Virality: <span>Surviving the Creator Valley</span></h2>
+    <p class="bt" style="margin-bottom:16px;font-size:15px">
       We reject snake-oil overnight promises. Serious personal branding follows the operational discipline of an institutional media house.
     </p>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;flex:1;min-height:0">
@@ -1031,30 +1110,30 @@ svg text {
 </div>
     <div class="hud"><div class="hi on"><div class="hd"></div>01 CODEX</div><div class="hi"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 24px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:26px 56px 20px;
               margin-right:60px;z-index:2">
-    <div class="badge" style="margin-bottom:8px">ENGINE ANALYTICS // SCALED PROOF</div>
+    <div class="badge" style="margin-bottom:6px">ENGINE ANALYTICS // SCALED PROOF</div>
     <h2 class="hl" style="margin-bottom:10px">40.9K Followers &amp; <span>1.1M Organic Reach</span> Case</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px">
-      <div class="card" style="position:relative;overflow:hidden;padding:16px 22px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:12px">
+      <div class="card" style="position:relative;overflow:hidden;padding:14px 20px">
         <div style="position:absolute;top:0;left:0;right:0;height:3px;
                     background:linear-gradient(90deg,var(--bo),var(--er))"></div>
-        <div style="font-size:clamp(28px,3.6vw,46px);font-weight:900;color:var(--bo);letter-spacing:-1px">40.9K</div>
-        <p class="bt" style="font-size:13.5px;margin-top:4px;font-weight:600">New Qualified Followers</p>
+        <div style="font-size:clamp(26px,3.4vw,42px);font-weight:900;color:var(--bo);letter-spacing:-1px">40.9K</div>
+        <p class="bt" style="font-size:13px;margin-top:2px;font-weight:600">New Qualified Followers</p>
       </div>
-      <div class="card" style="position:relative;overflow:hidden;padding:16px 22px">
+      <div class="card" style="position:relative;overflow:hidden;padding:14px 20px">
         <div style="position:absolute;top:0;left:0;right:0;height:3px;
                     background:linear-gradient(90deg,var(--bo),var(--wa))"></div>
-        <div style="font-size:clamp(28px,3.6vw,46px);font-weight:900;color:var(--bo);letter-spacing:-1px">11.0L</div>
-        <p class="bt" style="font-size:13.5px;margin-top:4px;font-weight:600">Total Organic Account Interactions</p>
+        <div style="font-size:clamp(26px,3.4vw,42px);font-weight:900;color:var(--bo);letter-spacing:-1px">11.0L</div>
+        <p class="bt" style="font-size:13px;margin-top:2px;font-weight:600">Total Organic Account Interactions</p>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0">
-      <div class="mockup-frame">
+      <div class="mockup-frame" style="padding:4px">
         <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-05-13-23-37-12-703_com.instagram.android.jpg"
              alt="Accounts Reached Dashboard">
       </div>
-      <div class="mockup-frame">
+      <div class="mockup-frame" style="padding:4px">
         <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-05-13-23-37-33-694_com.instagram.android.jpg"
              alt="Accounts Engaged Dashboard">
       </div>
@@ -1073,10 +1152,10 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 64px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">MACRO VISION // 2033</div>
-    <h2 class="hl" style="margin-bottom:14px">Unlocking the <span>99.5% Untapped</span> Commercial Potential</h2>
-    <p class="bt" style="margin-bottom:22px;font-size:15.5px">
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 60px 24px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">MACRO VISION // 2033</div>
+    <h2 class="hl" style="margin-bottom:12px">Unlocking the <span>99.5% Untapped</span> Commercial Potential</h2>
+    <p class="bt" style="margin-bottom:20px;font-size:15.5px">
       Less than 0.5% of serious B2B founders have built proprietary distribution moats. The market cap transition over the next decade is immense.
     </p>
     <div style="display:grid;grid-template-columns:1fr 2fr;gap:24px;flex:1;min-height:0">
@@ -1109,22 +1188,22 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:36px 64px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">VERIFIED PERFORMANCE</div>
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 60px 24px;z-index:2">
+    <div class="badge" style="margin-bottom:8px">VERIFIED PERFORMANCE</div>
     <h2 class="hl" style="margin-bottom:12px"><span>50,000 Followers</span> in 48 Days Through Pure Positioning</h2>
-    <p class="bt" style="margin-bottom:22px;font-size:15.5px">Zero dance trends, zero gimmicks. Scaled strictly through the FirstSelfie Creator Codex methodology.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:20px">
-      <div class="card" style="text-align:center;padding:26px">
-        <div style="font-size:54px;font-weight:900;color:var(--bo);letter-spacing:-2px">50K</div>
-        <div style="font-size:12.5px;font-weight:700;color:var(--gm);letter-spacing:1.5px;margin-top:6px">NET AUDIENCE GAIN</div>
+    <p class="bt" style="margin-bottom:20px;font-size:15.5px">Zero dance trends, zero gimmicks. Scaled strictly through the FirstSelfie Creator Codex methodology.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-bottom:18px">
+      <div class="card" style="text-align:center;padding:24px">
+        <div style="font-size:52px;font-weight:900;color:var(--bo);letter-spacing:-2px">50K</div>
+        <div style="font-size:12px;font-weight:700;color:var(--gm);letter-spacing:1.5px;margin-top:6px">NET AUDIENCE GAIN</div>
       </div>
-      <div class="card" style="text-align:center;padding:26px">
-        <div style="font-size:54px;font-weight:900;color:var(--bo);letter-spacing:-2px">48</div>
-        <div style="font-size:12.5px;font-weight:700;color:var(--gm);letter-spacing:1.5px;margin-top:6px">DAYS ELAPSED</div>
+      <div class="card" style="text-align:center;padding:24px">
+        <div style="font-size:52px;font-weight:900;color:var(--bo);letter-spacing:-2px">48</div>
+        <div style="font-size:12px;font-weight:700;color:var(--gm);letter-spacing:1.5px;margin-top:6px">DAYS ELAPSED</div>
       </div>
-      <div class="card" style="text-align:center;padding:26px">
-        <div style="font-size:54px;font-weight:900;color:var(--bo);letter-spacing:-2px">100%</div>
-        <div style="font-size:12.5px;font-weight:700;color:var(--gm);letter-spacing:1.5px;margin-top:6px">ORGANIC REACH</div>
+      <div class="card" style="text-align:center;padding:24px">
+        <div style="font-size:52px;font-weight:900;color:var(--bo);letter-spacing:-2px">100%</div>
+        <div style="font-size:12px;font-weight:700;color:var(--gm);letter-spacing:1.5px;margin-top:6px">ORGANIC REACH</div>
       </div>
     </div>
     <div style="background:rgba(255,107,0,.08);border:.5px solid rgba(255,107,0,.3);border-radius:6px;padding:16px 24px">
@@ -1146,27 +1225,27 @@ svg text {
 </div>
     <div class="hud"><div class="hi on"><div class="hd"></div>01 CODEX</div><div class="hi"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:34px 64px;justify-content:center;
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 60px;justify-content:center;
               margin-right:60px;z-index:2">
-    <div class="badge red" style="margin-bottom:12px">APPLICANT DISQUALIFICATION</div>
-    <h2 class="hl" style="margin-bottom:18px">Who This Program Is Strictly <span class="red">NOT</span> For</h2>
+    <div class="badge red" style="margin-bottom:10px">APPLICANT DISQUALIFICATION</div>
+    <h2 class="hl" style="margin-bottom:16px">Who This Program Is Strictly <span class="red">NOT</span> For</h2>
     <div style="display:flex;flex-direction:column;gap:14px">
       <div style="display:flex;align-items:center;gap:18px;background:rgba(255,61,0,.06);
-                  border:.5px solid rgba(255,61,0,.22);border-radius:6px;padding:18px 24px">
+                  border:.5px solid rgba(255,61,0,.22);border-radius:6px;padding:16px 22px">
         <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,61,0,.15);
                     border:1px solid var(--er);display:flex;align-items:center;justify-content:center;
                     flex-shrink:0;color:var(--er);font-size:16px;font-weight:900">&#10007;</div>
         <p style="font-size:15px;color:var(--bw)">Closed-loop thinkers demanding overnight viral windfalls without operational discipline.</p>
       </div>
       <div style="display:flex;align-items:center;gap:18px;background:rgba(255,61,0,.06);
-                  border:.5px solid rgba(255,61,0,.22);border-radius:6px;padding:18px 24px">
+                  border:.5px solid rgba(255,61,0,.22);border-radius:6px;padding:16px 22px">
         <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,61,0,.15);
                     border:1px solid var(--er);display:flex;align-items:center;justify-content:center;
                     flex-shrink:0;color:var(--er);font-size:16px;font-weight:900">&#10007;</div>
         <p style="font-size:15px;color:var(--bw)">Creators satisfied with running the same generic race as the rest of the herd.</p>
       </div>
       <div style="display:flex;align-items:center;gap:18px;background:rgba(255,61,0,.06);
-                  border:.5px solid rgba(255,61,0,.22);border-radius:6px;padding:18px 24px">
+                  border:.5px solid rgba(255,61,0,.22);border-radius:6px;padding:16px 22px">
         <div style="width:32px;height:32px;border-radius:50%;background:rgba(255,61,0,.15);
                     border:1px solid var(--er);display:flex;align-items:center;justify-content:center;
                     flex-shrink:0;color:var(--er);font-size:16px;font-weight:900">&#10007;</div>
@@ -1187,26 +1266,26 @@ svg text {
 </div>
     <div class="hud"><div class="hi on"><div class="hd"></div>01 CODEX</div><div class="hi"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:34px 56px 24px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 22px;
               margin-right:60px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">MARKET DISTRIBUTION TIMELINE</div>
-    <h2 class="hl" style="margin-bottom:16px">2010 to 2030: The Inevitable Shift to <span>Media Houses</span></h2>
+    <div class="badge" style="margin-bottom:8px">MARKET DISTRIBUTION TIMELINE</div>
+    <h2 class="hl" style="margin-bottom:14px">2010 to 2030: The Inevitable Shift to <span>Media Houses</span></h2>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;flex:1;min-height:0">
-      <div class="card" style="padding:24px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-size:13px;font-weight:700;color:var(--gm);letter-spacing:1px">ERA 1: 2010–2018</div>
-        <div style="font-size:19px;font-weight:800;color:var(--bw)">Agency Monopolies</div>
+      <div class="card" style="padding:22px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;color:var(--gm);letter-spacing:1px">ERA 1: 2010–2018</div>
+        <div style="font-size:18px;font-weight:800;color:var(--bw)">Agency Monopolies</div>
         <p class="bt" style="font-size:14px">Brands relied entirely on centralized PR agencies and billboards. Zero direct founder distribution.</p>
       </div>
-      <div class="card" style="padding:24px;display:flex;flex-direction:column;gap:12px">
-        <div style="font-size:13px;font-weight:700;color:var(--bo);letter-spacing:1px">ERA 2: 2018–2024</div>
-        <div style="font-size:19px;font-weight:800;color:var(--bo)">The Influencer Wave</div>
+      <div class="card" style="padding:22px;display:flex;flex-direction:column;gap:12px">
+        <div style="font-size:12.5px;font-weight:700;color:var(--bo);letter-spacing:1px">ERA 2: 2018–2024</div>
+        <div style="font-size:18px;font-weight:800;color:var(--bo)">The Influencer Wave</div>
         <p class="bt" style="font-size:14px">Commodity content creators flooded social feeds. Format cloning peaked; organic trust dropped to historic lows.</p>
       </div>
       <div style="background:linear-gradient(135deg,rgba(255,107,0,.1),rgba(26,26,26,.9));
-                  border:1.5px solid var(--bo);border-radius:8px;padding:24px;
+                  border:1.5px solid var(--bo);border-radius:8px;padding:22px;
                   display:flex;flex-direction:column;gap:12px;box-shadow:0 0 30px rgba(255,107,0,.15)">
-        <div style="font-size:13px;font-weight:700;color:var(--wa);letter-spacing:1px">ERA 3: 2025–2030</div>
-        <div style="font-size:19px;font-weight:800;color:var(--bw)">Identity Media Houses</div>
+        <div style="font-size:12.5px;font-weight:700;color:var(--wa);letter-spacing:1px">ERA 3: 2025–2030</div>
+        <div style="font-size:18px;font-weight:800;color:var(--bw)">Identity Media Houses</div>
         <p style="font-size:14px;color:#ddd;line-height:1.6">Founders operate autonomous, internal production engines. Uncopyable personal IP commands total category pricing power.</p>
       </div>
     </div>
@@ -1224,13 +1303,13 @@ svg text {
 </div>
     <div class="hud"><div class="hi on"><div class="hd"></div>01 CODEX</div><div class="hi"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:34px 56px 24px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 22px;
               margin-right:60px;z-index:2">
-    <div class="badge red" style="margin-bottom:10px">EXECUTION TRAJECTORY</div>
+    <div class="badge red" style="margin-bottom:8px">EXECUTION TRAJECTORY</div>
     <h2 class="hl" style="margin-bottom:8px">You Are Here: <span>The Day 45 Burnout Chasm</span></h2>
-    <p class="bt" style="margin-bottom:16px;font-size:15px">90% of founders quit at Day 45 because they lack a delegated backend engine.</p>
+    <p class="bt" style="margin-bottom:14px;font-size:15px">90% of founders quit at Day 45 because they lack a delegated backend engine.</p>
     <div style="flex:1;min-height:0">
-      <svg viewBox="0 0 820 200" style="width:100%;height:100%" preserveAspectRatio="none">
+      <svg viewBox="0 0 820 195" style="width:100%;height:100%" preserveAspectRatio="none">
         <defs>
           <linearGradient id="cg" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#FF3D00"/>
@@ -1238,16 +1317,16 @@ svg text {
             <stop offset="100%" stop-color="#FF9A3C"/>
           </linearGradient>
         </defs>
-        <line x1="0" y1="170" x2="820" y2="170" stroke="#252525" stroke-width="1"/>
-        <line x1="0" y1="90"  x2="820" y2="90"  stroke="#252525" stroke-width="1"/>
+        <line x1="0" y1="165" x2="820" y2="165" stroke="#252525" stroke-width="1"/>
+        <line x1="0" y1="85"  x2="820" y2="85"  stroke="#252525" stroke-width="1"/>
         <path d="M 40,50 C 120,40 180,120 280,165 C 340,175 400,160 520,90 C 620,40 720,25 800,20"
               stroke="url(#cg)" stroke-width="3.5" fill="none"/>
-        <rect x="220" y="140" width="130" height="34" rx="4" fill="rgba(255,61,0,.2)" stroke="#FF3D00" stroke-width="1"/>
-        <text x="285" y="162" text-anchor="middle" fill="#FF3D00" font-size="12" font-weight="700">DAY 45 CHASM (QUIT)</text>
-        <text x="660" y="55" text-anchor="middle" fill="#FF9A3C" font-size="13" font-weight="700">COMPOUNDING EQUITY &#8594;</text>
-        <text x="50"  y="186" fill="#666" font-size="12" font-weight="600">DAY 1 (EXCITEMENT)</text>
-        <text x="285" y="186" fill="#666" font-size="12" font-weight="600">DAY 45 (CHASM)</text>
-        <text x="750" y="186" fill="#666" font-size="12" font-weight="600">DAY 90+ (AUTONOMOUS)</text>
+        <rect x="220" y="136" width="130" height="34" rx="4" fill="rgba(255,61,0,.2)" stroke="#FF3D00" stroke-width="1"/>
+        <text x="285" y="158" text-anchor="middle" fill="#FF3D00" font-size="12" font-weight="700">DAY 45 CHASM (QUIT)</text>
+        <text x="660" y="52" text-anchor="middle" fill="#FF9A3C" font-size="13" font-weight="700">COMPOUNDING EQUITY &#8594;</text>
+        <text x="50"  y="180" fill="#666" font-size="12" font-weight="600">DAY 1 (EXCITEMENT)</text>
+        <text x="285" y="180" fill="#666" font-size="12" font-weight="600">DAY 45 (CHASM)</text>
+        <text x="750" y="180" fill="#666" font-size="12" font-weight="600">DAY 90+ (AUTONOMOUS)</text>
       </svg>
     </div>
   </div>
@@ -1264,7 +1343,7 @@ svg text {
 </div>
     <div class="hud"><div class="hi on"><div class="hd"></div>01 CODEX</div><div class="hi"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 20px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:30px 56px 20px;
               margin-right:60px;z-index:2">
     <div class="badge" style="margin-bottom:8px">3-STAR FRAMEWORK // PILLAR 01</div>
     <h2 class="hl" style="margin-bottom:12px">Creator Codex Method: <span>The 7-Step Base Architecture</span></h2>
@@ -1319,7 +1398,7 @@ svg text {
 </div>
     <div class="hud"><div class="hi"><div class="hd"></div>01 CODEX</div><div class="hi on"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 20px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:30px 56px 20px;
               margin-right:60px;z-index:2">
     <div class="badge" style="margin-bottom:8px">PROGRAM EXECUTION TIMELINE</div>
     <h2 class="hl" style="margin-bottom:12px">60 Days: <span>From Camera Introversion to Self-Sustaining Scale</span></h2>
@@ -1360,7 +1439,7 @@ svg text {
 </div>
     <div class="hud"><div class="hi"><div class="hd"></div>01 CODEX</div><div class="hi on"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 20px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:30px 56px 20px;
               margin-right:60px;z-index:2">
     <div class="badge" style="margin-bottom:8px">3-STAR FRAMEWORK // PILLAR 02</div>
     <h2 class="hl" style="margin-bottom:12px">The Brain-First Engine: <span>From 3 Hours to 2 Hrs/Team</span></h2>
@@ -1395,55 +1474,55 @@ svg text {
 </div>
     <div class="hud"><div class="hi"><div class="hd"></div>01 CODEX</div><div class="hi on"><div class="hd"></div>02 ENGINE</div><div class="hi"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:30px 56px 20px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:26px 56px 18px;
               margin-right:60px;z-index:2">
-    <div class="badge" style="margin-bottom:8px">ACTIVE PRODUCTION VOLUME</div>
-    <h2 class="hl" style="margin-bottom:12px">Managing <span>Omnichannel Volume</span> with Zero Creative Fatigue</h2>
+    <div class="badge" style="margin-bottom:6px">ACTIVE PRODUCTION VOLUME</div>
+    <h2 class="hl" style="margin-bottom:10px">Managing <span>Omnichannel Volume</span> with Zero Creative Fatigue</h2>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;flex:1;min-height:0">
-      <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;flex-direction:column;gap:6px">
         <div style="font-size:11px;font-weight:700;color:var(--bo);letter-spacing:1px;background:rgba(255,107,0,.1);padding:4px 10px;border-radius:4px;align-self:flex-start">
           &#10022; 7.0M SINGLE REEL
         </div>
-        <div class="mockup-frame">
+        <div class="mockup-frame" style="padding:3px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-05-13-23-40-47-087_com.instagram.android.jpg"
                alt="7.0M Reel Screenshot">
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;flex-direction:column;gap:6px">
         <div style="font-size:11px;font-weight:700;color:var(--bo);letter-spacing:1px;background:rgba(255,107,0,.1);padding:4px 10px;border-radius:4px;align-self:flex-start">
           &#10022; FEED CAROUSEL
         </div>
-        <div class="mockup-frame">
+        <div class="mockup-frame" style="padding:3px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-05-13-23-24-21-098_com.instagram.android.jpg"
                alt="Feed Carousel Screenshot">
         </div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:flex;flex-direction:column;gap:6px">
         <div style="font-size:11px;font-weight:700;color:var(--bo);letter-spacing:1px;background:rgba(255,107,0,.1);padding:4px 10px;border-radius:4px;align-self:flex-start">
           &#10022; 1,300+ COMMUNITY
         </div>
-        <div class="mockup-frame">
+        <div class="mockup-frame" style="padding:3px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-07-28-23-18-22-189_com.instagram.android.jpg"
                alt="Community Screenshot">
         </div>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:12px">
-      <div class="card" style="text-align:center;padding:12px">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:10px">
+      <div class="card" style="text-align:center;padding:10px">
         <div style="font-size:22px;font-weight:900;color:var(--bo)">7.0M</div>
-        <div style="font-size:10.5px;font-weight:600;color:var(--gm);margin-top:3px">SINGLE REEL VIEWS</div>
+        <div style="font-size:10.5px;font-weight:600;color:var(--gm);margin-top:2px">SINGLE REEL VIEWS</div>
       </div>
-      <div class="card" style="text-align:center;padding:12px">
+      <div class="card" style="text-align:center;padding:10px">
         <div style="font-size:22px;font-weight:900;color:var(--bo)">Daily</div>
-        <div style="font-size:10.5px;font-weight:600;color:var(--gm);margin-top:3px">SHORT-FORM OUTPUT</div>
+        <div style="font-size:10.5px;font-weight:600;color:var(--gm);margin-top:2px">SHORT-FORM OUTPUT</div>
       </div>
-      <div class="card" style="text-align:center;padding:12px">
+      <div class="card" style="text-align:center;padding:10px">
         <div style="font-size:22px;font-weight:900;color:var(--bo)">2&#215;/wk</div>
-        <div style="font-size:10.5px;font-weight:600;color:var(--gm);margin-top:3px">MASTERCLASS VIDEO</div>
+        <div style="font-size:10.5px;font-weight:600;color:var(--gm);margin-top:2px">MASTERCLASS VIDEO</div>
       </div>
-      <div class="card" style="text-align:center;padding:12px">
+      <div class="card" style="text-align:center;padding:10px">
         <div style="font-size:22px;font-weight:900;color:var(--bo)">3</div>
-        <div style="font-size:10.5px;font-weight:600;color:var(--gm);margin-top:3px">PRIVATE COMMUNITIES</div>
+        <div style="font-size:10.5px;font-weight:600;color:var(--gm);margin-top:2px">PRIVATE COMMUNITIES</div>
       </div>
     </div>
   </div>
@@ -1460,39 +1539,39 @@ svg text {
 </div>
     <div class="hud"><div class="hi"><div class="hd"></div>01 CODEX</div><div class="hi"><div class="hd"></div>02 ENGINE</div><div class="hi on"><div class="hd"></div>03 APA</div></div>
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:30px 56px 20px;
+  <div style="flex:1;display:flex;flex-direction:column;padding:26px 56px 18px;
               margin-right:60px;z-index:2">
-    <div class="badge" style="margin-bottom:8px">3-STAR FRAMEWORK // PILLAR 03</div>
+    <div class="badge" style="margin-bottom:6px">3-STAR FRAMEWORK // PILLAR 03</div>
     <h2 class="hl" style="margin-bottom:8px">APA Matrix: <span>Mathematics</span> Over Guesswork</h2>
-    <p class="bt" style="margin-bottom:12px;font-size:15px">
+    <p class="bt" style="margin-bottom:10px;font-size:14.5px">
       Instant post-mortem diagnostics on retention drop-offs, hook hold rates, and buyer conversion triggers.
     </p>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:14px">
-      <div class="card" style="position:relative;overflow:hidden;padding:14px 20px">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:12px">
+      <div class="card" style="position:relative;overflow:hidden;padding:12px 18px">
         <div style="position:absolute;bottom:0;left:0;right:0;height:2px;
                     background:linear-gradient(90deg,var(--bo),var(--wa))"></div>
-        <div style="font-size:32px;font-weight:900;color:var(--bo);letter-spacing:-1px">21s</div>
-        <p class="bt" style="font-size:12px;font-weight:600;margin-top:4px">AVERAGE WATCH TIME</p>
+        <div style="font-size:30px;font-weight:900;color:var(--bo);letter-spacing:-1px">21s</div>
+        <p class="bt" style="font-size:11.5px;font-weight:600;margin-top:2px">AVERAGE WATCH TIME</p>
       </div>
-      <div class="card" style="position:relative;overflow:hidden;padding:14px 20px">
+      <div class="card" style="position:relative;overflow:hidden;padding:12px 18px">
         <div style="position:absolute;bottom:0;left:0;right:0;height:2px;
                     background:linear-gradient(90deg,var(--bo),var(--wa))"></div>
-        <div style="font-size:32px;font-weight:900;color:var(--bo);letter-spacing:-1px">84%</div>
-        <p class="bt" style="font-size:12px;font-weight:600;margin-top:4px">HOOK HOLD RATE</p>
+        <div style="font-size:30px;font-weight:900;color:var(--bo);letter-spacing:-1px">84%</div>
+        <p class="bt" style="font-size:11.5px;font-weight:600;margin-top:2px">HOOK HOLD RATE</p>
       </div>
-      <div class="card" style="position:relative;overflow:hidden;padding:14px 20px">
+      <div class="card" style="position:relative;overflow:hidden;padding:12px 18px">
         <div style="position:absolute;bottom:0;left:0;right:0;height:2px;
                     background:linear-gradient(90deg,var(--bo),var(--wa))"></div>
-        <div style="font-size:32px;font-weight:900;color:var(--bo);letter-spacing:-1px">73%</div>
-        <p class="bt" style="font-size:12px;font-weight:600;margin-top:4px">NON-FOLLOWER REACH</p>
+        <div style="font-size:30px;font-weight:900;color:var(--bo);letter-spacing:-1px">73%</div>
+        <p class="bt" style="font-size:11.5px;font-weight:600;margin-top:2px">NON-FOLLOWER REACH</p>
       </div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex:1;min-height:0">
-      <div class="mockup-frame">
+      <div class="mockup-frame" style="padding:3px">
         <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-05-10-00-40-45-026_com.instagram.android.jpg"
              alt="Hook Retention Graph">
       </div>
-      <div class="mockup-frame">
+      <div class="mockup-frame" style="padding:3px">
         <img src="Proof-20260906T155032Z-1-001/Proof/Screenshot_2026-05-11-06-18-44-626_com.instagram.android.jpg"
              alt="Audience Hold Rate Graph">
       </div>
@@ -1511,47 +1590,47 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:32px 56px 22px;z-index:2">
-    <div class="badge" style="margin-bottom:8px">CONVERSION PROOF</div>
+  <div style="flex:1;display:flex;flex-direction:column;padding:26px 56px 20px;z-index:2">
+    <div class="badge" style="margin-bottom:6px">CONVERSION PROOF</div>
     <h2 class="hl" style="margin-bottom:6px">When Positioning Is Correct, <span>Buyers Sell Themselves</span></h2>
-    <p class="bt" style="margin-bottom:14px;font-size:15px">Real inbound DMs — zero outbound cold pitching required.</p>
+    <p class="bt" style="margin-bottom:12px;font-size:14.5px">Real inbound DMs — zero outbound cold pitching required.</p>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1;min-height:0">
       <div style="background:var(--dc);border:1px solid rgba(255,107,0,.24);border-radius:8px;
-                  padding:14px;display:flex;flex-direction:column;gap:10px;overflow:hidden">
+                  padding:10px;display:flex;flex-direction:column;gap:8px;overflow:hidden">
         <div style="font-size:10px;font-weight:800;letter-spacing:1px;color:var(--bo);
-                    border:.5px solid rgba(255,107,0,.35);padding:4px 8px;border-radius:3px;
+                    border:.5px solid rgba(255,107,0,.35);padding:3px 8px;border-radius:3px;
                     align-self:flex-start">ROARIX STUDIO DM</div>
-        <div class="mockup-frame" style="padding:4px">
+        <div class="mockup-frame" style="padding:2px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Whatsapp text testimonial/Screenshot_2026-07-04-13-15-51-706_com.instagram.android.jpg"
                alt="Roarix Smart Studio DM">
         </div>
       </div>
       <div style="background:var(--dc);border:1px solid rgba(255,107,0,.24);border-radius:8px;
-                  padding:14px;display:flex;flex-direction:column;gap:10px;overflow:hidden">
+                  padding:10px;display:flex;flex-direction:column;gap:8px;overflow:hidden">
         <div style="font-size:10px;font-weight:800;letter-spacing:1px;color:var(--bo);
-                    border:.5px solid rgba(255,107,0,.35);padding:4px 8px;border-radius:3px;
+                    border:.5px solid rgba(255,107,0,.35);padding:3px 8px;border-radius:3px;
                     align-self:flex-start">RAMA LINGAM DM</div>
-        <div class="mockup-frame" style="padding:4px">
+        <div class="mockup-frame" style="padding:2px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Whatsapp text testimonial/Screenshot_2026-07-04-13-15-59-708_com.instagram.android.jpg"
                alt="Rama Lingam DM">
         </div>
       </div>
       <div style="background:var(--dc);border:1px solid rgba(255,107,0,.24);border-radius:8px;
-                  padding:14px;display:flex;flex-direction:column;gap:10px;overflow:hidden">
+                  padding:10px;display:flex;flex-direction:column;gap:8px;overflow:hidden">
         <div style="font-size:10px;font-weight:800;letter-spacing:1px;color:var(--bo);
-                    border:.5px solid rgba(255,107,0,.35);padding:4px 8px;border-radius:3px;
+                    border:.5px solid rgba(255,107,0,.35);padding:3px 8px;border-radius:3px;
                     align-self:flex-start">WHATSAPP INBOUND</div>
-        <div class="mockup-frame" style="padding:4px">
+        <div class="mockup-frame" style="padding:2px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Whatsapp text testimonial/IMG_20260728_232154.jpg"
                alt="WhatsApp High Intent Inbound">
         </div>
       </div>
       <div style="background:var(--dc);border:1px solid rgba(255,107,0,.24);border-radius:8px;
-                  padding:14px;display:flex;flex-direction:column;gap:10px;overflow:hidden">
+                  padding:10px;display:flex;flex-direction:column;gap:8px;overflow:hidden">
         <div style="font-size:10px;font-weight:800;letter-spacing:1px;color:var(--bo);
-                    border:.5px solid rgba(255,107,0,.35);padding:4px 8px;border-radius:3px;
+                    border:.5px solid rgba(255,107,0,.35);padding:3px 8px;border-radius:3px;
                     align-self:flex-start">STORY TESTIMONIALS</div>
-        <div class="mockup-frame" style="padding:4px">
+        <div class="mockup-frame" style="padding:2px">
           <img src="Proof-20260906T155032Z-1-001/Proof/Insta story testimonial/instagram_comments_9x16.png"
                alt="Instagram Story Comments">
         </div>
@@ -1571,12 +1650,12 @@ svg text {
 </div>
     
     
-  <div style="flex:1;display:flex;flex-direction:column;padding:34px 56px 28px;z-index:2">
-    <div class="badge" style="margin-bottom:10px">MARKET HORIZON</div>
-    <h2 class="hl" style="margin-bottom:8px">The Next Wave Is Coming: <span>Ride It</span> or Drown In It</h2>
-    <p class="bt" style="margin-bottom:16px;font-size:15.5px">Early movers in Identity Branding capture category leadership. Followers fight for scraps.</p>
-    <div style="flex:1;min-height:0;margin-bottom:14px">
-      <svg viewBox="0 0 820 126" style="width:100%;height:100%" preserveAspectRatio="none">
+  <div style="flex:1;display:flex;flex-direction:column;padding:26px 56px 20px;z-index:2">
+    <div class="badge" style="margin-bottom:6px">MARKET HORIZON</div>
+    <h2 class="hl" style="margin-bottom:6px">The Next Wave Is Coming: <span>Ride It</span> or Drown In It</h2>
+    <p class="bt" style="margin-bottom:12px;font-size:14.5px">Early movers in Identity Branding capture category leadership. Followers fight for scraps.</p>
+    <div style="flex:1;min-height:0;margin-bottom:12px">
+      <svg viewBox="0 0 820 120" style="width:100%;height:100%" preserveAspectRatio="none">
         <defs>
           <linearGradient id="wg" x1="0" y1="0" x2="1" y2="0">
             <stop offset="0%" stop-color="#FF3D00"/>
@@ -1584,24 +1663,24 @@ svg text {
             <stop offset="100%" stop-color="#FF9A3C"/>
           </linearGradient>
         </defs>
-        <line x1="0" y1="110" x2="820" y2="110" stroke="#252525" stroke-width="1"/>
-        <path d="M 0,105 C 100,100 180,40 300,45 C 420,50 480,100 580,105 C 680,110 740,40 820,15"
+        <line x1="0" y1="105" x2="820" y2="105" stroke="#252525" stroke-width="1"/>
+        <path d="M 0,100 C 100,95 180,38 300,42 C 420,48 480,95 580,100 C 660,104 720,38 800,16"
               stroke="url(#wg)" stroke-width="3" fill="none"/>
-        <text x="300" y="30" text-anchor="middle" fill="#FF3D00" font-size="12" font-weight="700">WAVE 1 (2023 - DEAD)</text>
-        <text x="580" y="90" text-anchor="middle" fill="#777" font-size="11.5">SATURATION TROUGH</text>
-        <text x="740" y="24" text-anchor="middle" fill="#FF9A3C" font-size="13" font-weight="800">WAVE 2 (2026 - IDENTITY)</text>
+        <text x="300" y="28" text-anchor="middle" fill="#FF3D00" font-size="12" font-weight="700">WAVE 1 (2023 - DEAD)</text>
+        <text x="560" y="86" text-anchor="middle" fill="#777" font-size="11.5">SATURATION TROUGH</text>
+        <text x="690" y="24" text-anchor="middle" fill="#FF9A3C" font-size="12.5" font-weight="800">WAVE 2 (2026 - IDENTITY)</text>
       </svg>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-      <div class="card" style="padding:18px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div class="card" style="padding:14px 18px">
         <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--bo)">&#10003; OPTION A — LEAD THE WAVE</div>
-        <div style="font-size:18px;font-weight:800;color:var(--bw);margin:4px 0 6px">Engineer Your Identity Moat</div>
-        <p class="bt" style="font-size:14px">Build an uncopyable personal brand that compounds across cycles, drives inbound deal flow, and cements category leadership.</p>
+        <div style="font-size:17px;font-weight:800;color:var(--bw);margin:3px 0 4px">Engineer Your Identity Moat</div>
+        <p class="bt" style="font-size:13.5px">Build an uncopyable personal brand that compounds across cycles, drives inbound deal flow, and cements category leadership.</p>
       </div>
-      <div class="card" style="padding:18px;border-color:#333">
+      <div class="card" style="padding:14px 18px;border-color:#333">
         <div style="font-size:11px;font-weight:700;letter-spacing:2px;color:var(--gm)">&#10007; OPTION B — WATCH FROM SIDELINES</div>
-        <div style="font-size:18px;font-weight:800;color:var(--gm);margin:4px 0 6px">End Up Copying Others</div>
-        <p class="bt" style="font-size:14px">Wait on the sidelines, watch competitors capture market share, and end up copying their playbook when it's already too late.</p>
+        <div style="font-size:17px;font-weight:800;color:var(--gm);margin:3px 0 4px">End Up Copying Others</div>
+        <p class="bt" style="font-size:13.5px">Wait on the sidelines, watch competitors capture market share, and end up copying their playbook when it's already too late.</p>
       </div>
     </div>
   </div>
@@ -1617,42 +1696,42 @@ svg text {
     
   <div class="glow" style="width:580px;height:580px;top:50%;left:50%;transform:translate(-50%,-50%)"></div>
   <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
-              padding:36px 56px;position:relative;z-index:2">
+              padding:32px 50px;position:relative;z-index:2">
     <img src="LOGO/Secondary Logo - Transparent.png" style="width:200px;object-fit:contain;margin-bottom:8px;filter:drop-shadow(0 0 20px rgba(255,107,0,.3))" alt="FirstSelfie">
-    <div style="font-size:11px;color:var(--bo);letter-spacing:4px;font-weight:700;margin-bottom:24px;text-transform:uppercase">
+    <div style="font-size:11px;color:var(--bo);letter-spacing:4px;font-weight:700;margin-bottom:20px;text-transform:uppercase">
       Identity Brand Blueprint // 2026 Edition
     </div>
     <div style="background:var(--dc);border:1px solid rgba(255,107,0,.35);border-radius:14px;
-                padding:36px 50px;text-align:center;
+                padding:32px 48px;text-align:center;
                 box-shadow:0 0 70px rgba(255,107,0,.18),inset 0 0 60px rgba(255,107,0,.03);
                 max-width:660px;width:100%">
       <div style="background:var(--bo);color:#000;font-size:12px;font-weight:900;letter-spacing:2px;
-                  padding:8px 24px;border-radius:4px;display:inline-block;margin-bottom:18px">
+                  padding:7px 22px;border-radius:4px;display:inline-block;margin-bottom:16px">
         &#9889; CAPACITY: 7–12 CLIENTS MONTHLY
       </div>
       <div style="font-size:clamp(20px,2.8vw,30px);font-weight:900;color:var(--bw);
-                  letter-spacing:-.5px;margin-bottom:12px">
+                  letter-spacing:-.5px;margin-bottom:10px">
         Strict Intake Cap:<br>7 to 12 Partners Per Month
       </div>
-      <p class="bt" style="margin-bottom:18px;font-size:15px">
+      <p class="bt" style="margin-bottom:16px;font-size:15px">
         Reserved exclusively for the top 1% of serious founders and operators ready to scale their uncopyable identity.
       </p>
       <div style="background:rgba(255,107,0,.08);border:.5px solid rgba(255,107,0,.25);
-                  border-radius:6px;padding:14px 20px;margin-bottom:24px;text-align:left">
-        <div style="font-size:11px;color:var(--bo);font-weight:800;letter-spacing:1.5px;margin-bottom:6px">
+                  border-radius:6px;padding:12px 18px;margin-bottom:20px;text-align:left">
+        <div style="font-size:11px;color:var(--bo);font-weight:800;letter-spacing:1.5px;margin-bottom:4px">
           &#10022; ADVISORY INTAKE STATUS: ACTIVE
         </div>
-        <p class="bt" style="font-size:13.5px">Overflow applications roll to next quarter's waitlist — no exceptions. Serious operators only.</p>
+        <p class="bt" style="font-size:13px">Overflow applications roll to next quarter's waitlist — no exceptions. Serious operators only.</p>
       </div>
       <button onclick="window.open('https://instagram.com/firstselfie.in', '_blank')"
               style="background:linear-gradient(135deg,var(--bo),var(--er));color:#fff;
                      font-family:Poppins,sans-serif;font-size:14px;font-weight:800;
-                     letter-spacing:2px;padding:16px 42px;border-radius:6px;border:none;
+                     letter-spacing:2px;padding:15px 40px;border-radius:6px;border:none;
                      cursor:pointer;text-transform:uppercase;
                      box-shadow:0 4px 35px rgba(255,107,0,.45);transition:all .3s">
         CONFIRM YOUR STRATEGY CALL &#8594;
       </button>
-      <div style="margin-top:22px;display:flex;gap:24px;justify-content:center;
+      <div style="margin-top:18px;display:flex;gap:24px;justify-content:center;
                   font-size:13px;color:var(--gm)">
         <span>Instagram: <a href="https://instagram.com/firstselfie.in" target="_blank"
                             style="color:var(--bo);text-decoration:none;font-weight:600">@firstselfie.in</a></span>
