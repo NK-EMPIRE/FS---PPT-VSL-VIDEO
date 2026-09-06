@@ -1,0 +1,10 @@
+﻿# Large media files - GitHub 100MB limit
+*.MP3
+*.mp3
+*.mp4
+*.MP4
+*.mov
+*.MOV
+
+# Large video testimonials
+Proof-20260906T155032Z-1-001/Proof/Testimonial Videos/
