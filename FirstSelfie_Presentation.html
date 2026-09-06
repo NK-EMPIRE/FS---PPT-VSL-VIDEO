@@ -3,12 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>First Selfie — The Identity Brand Blueprint 2026</title>
-<meta name="description" content="FirstSelfie 2026: The 3-Star Architecture to engineer an uncopyable Identity Brand.">
+<title>First Selfie — Presentation Studio 2026</title>
+<meta name="description" content="FirstSelfie 2026: The Canva-Grade Presentation & Edit Studio for the Identity Brand Blueprint.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+<!-- Native PowerPoint (.pptx) Generator Engine -->
+<script src="js/pptxgen.bundle.js"></script>
 <style>
+/* Existing Slide Styles */
+
 :root {
   --bb: #0A0A0A;
   --dc: #161616;
@@ -392,11 +396,957 @@ html, body {
 svg text {
   font-family: 'Poppins', sans-serif;
 }
+
+
+/* Canva Studio Engine Additions */
+
+/* ==========================================================================
+   CANVA PRESENTATION STUDIO SUITE 2026
+   ========================================================================== */
+:root {
+  --studio-bg: #0d0d0d;
+  --studio-panel: #141414;
+  --studio-border: rgba(255, 107, 0, 0.25);
+  --studio-border-subtle: #262626;
+  --studio-text: #F0F0F0;
+  --studio-muted: #8E8E8E;
+  --accent-orange: #FF6B00;
+  --accent-orange-glow: rgba(255, 107, 0, 0.4);
+  --accent-red: #FF3D00;
+  --accent-amber: #FF9A3C;
+  --canvas-bg: #050505;
+}
+
+/* Studio Root Layout */
+#studioApp {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--studio-bg);
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+}
+
+/* Top Studio Navigation Bar */
+.canva-header {
+  height: 54px;
+  background: var(--studio-panel);
+  border-bottom: 1px solid var(--studio-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 100;
+  flex-shrink: 0;
+}
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.studio-brand-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.studio-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(255, 107, 0, 0.4));
+}
+.deck-title-input {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 4px;
+  outline: none;
+  max-width: 280px;
+  transition: all 0.2s;
+}
+.deck-title-input:hover, .deck-title-input:focus {
+  border-color: var(--accent-orange);
+  background: rgba(255, 107, 0, 0.08);
+}
+.mode-switch-group {
+  display: flex;
+  background: #1f1f1f;
+  border-radius: 6px;
+  padding: 2px;
+  border: 1px solid #333;
+}
+.mode-btn {
+  background: transparent;
+  border: none;
+  color: var(--studio-muted);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+.mode-btn.active {
+  background: var(--accent-orange);
+  color: #000;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255, 107, 0, 0.3);
+}
+.mode-btn:hover:not(.active) {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.history-btn {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #ccc;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.history-btn:hover {
+  background: #2a2a2a;
+  color: #fff;
+  border-color: #555;
+}
+.save-tag {
+  font-size: 11px;
+  color: #00E676;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  background: rgba(0, 230, 118, 0.08);
+  padding: 4px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 230, 118, 0.2);
+}
+.save-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00E676;
+  box-shadow: 0 0 8px #00E676;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.canva-btn {
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 6px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+.btn-pptx {
+  background: linear-gradient(135deg, #FF6B00, #FF3D00);
+  color: #000;
+  box-shadow: 0 2px 10px rgba(255, 107, 0, 0.35);
+}
+.btn-pptx:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+.btn-pdf {
+  background: #222;
+  color: #eee;
+  border-color: #444;
+}
+.btn-pdf:hover {
+  background: #333;
+  color: #fff;
+}
+.btn-reset {
+  background: rgba(255, 255, 255, 0.05);
+  color: #999;
+}
+.btn-reset:hover {
+  background: rgba(255, 61, 0, 0.15);
+  color: var(--accent-red);
+}
+.btn-share {
+  background: #fff;
+  color: #000;
+  font-weight: 800;
+}
+.btn-share:hover {
+  background: var(--accent-orange);
+  box-shadow: 0 0 14px rgba(255, 107, 0, 0.5);
+}
+
+/* Studio Workspace Body */
+.studio-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Left Icon Rail */
+.canva-rail {
+  width: 64px;
+  background: #111;
+  border-right: 1px solid var(--studio-border-subtle);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 0;
+  gap: 14px;
+  z-index: 40;
+  flex-shrink: 0;
+}
+.rail-btn {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #888;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+.rail-btn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+.rail-btn.active {
+  color: var(--accent-orange);
+  background: rgba(255, 107, 0, 0.12);
+  border: 1px solid rgba(255, 107, 0, 0.3);
+}
+.rail-icon {
+  font-size: 18px;
+}
+.rail-label {
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.rail-collapse {
+  margin-top: auto;
+}
+
+/* Left Drawer Flyout Panel */
+.canva-drawer {
+  width: 320px;
+  background: var(--studio-panel);
+  border-right: 1px solid var(--studio-border-subtle);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 30;
+  flex-shrink: 0;
+  transition: width 0.25s ease;
+}
+.canva-drawer.collapsed {
+  width: 0;
+  border-right: none;
+}
+.drawer-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--studio-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.drawer-header h3 {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.drawer-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+}
+.drawer-panel {
+  display: none;
+  height: 100%;
+}
+.drawer-panel.active {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slides List Panel */
+.slides-list-scroll {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-right: 4px;
+}
+.slide-card-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #181818;
+  border: 1px solid #282828;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+}
+.slide-card-item:hover {
+  background: #202020;
+  border-color: #444;
+}
+.slide-card-item.active {
+  border-color: var(--accent-orange);
+  background: rgba(255, 107, 0, 0.08);
+  box-shadow: 0 0 12px rgba(255, 107, 0, 0.15);
+}
+.slide-card-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent-orange);
+  width: 22px;
+}
+.slide-card-info {
+  flex: 1;
+  min-width: 0;
+}
+.slide-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.slide-card-sub {
+  font-size: 10px;
+  color: #888;
+}
+.slide-card-actions {
+  display: flex;
+  gap: 4px;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+.slide-card-item:hover .slide-card-actions {
+  opacity: 1;
+}
+.card-act-btn {
+  background: #252525;
+  border: none;
+  color: #bbb;
+  width: 22px;
+  height: 22px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-act-btn:hover {
+  background: var(--accent-orange);
+  color: #000;
+}
+
+/* Media Asset Panel (Proof & Logos) */
+.media-filter-pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.filter-pill {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: #aaa;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filter-pill.active, .filter-pill:hover {
+  background: var(--accent-orange);
+  color: #000;
+  border-color: var(--accent-orange);
+}
+.media-search-input {
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+  font-family: inherit;
+  font-size: 11.5px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  outline: none;
+}
+.media-search-input:focus {
+  border-color: var(--accent-orange);
+}
+.upload-box-btn {
+  width: 100%;
+  background: rgba(255, 107, 0, 0.1);
+  border: 1px dashed var(--accent-orange);
+  color: var(--accent-orange);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  transition: all 0.2s;
+}
+.upload-box-btn:hover {
+  background: rgba(255, 107, 0, 0.18);
+  box-shadow: 0 0 12px rgba(255, 107, 0, 0.25);
+}
+.media-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  overflow-y: auto;
+  flex: 1;
+}
+.media-thumb-card {
+  background: #1a1a1a;
+  border: 1px solid #282828;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.media-thumb-card:hover {
+  border-color: var(--accent-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+.media-thumb-img {
+  height: 90px;
+  width: 100%;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+}
+.media-thumb-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.media-thumb-info {
+  padding: 6px 8px;
+  background: #141414;
+  border-top: 1px solid #222;
+}
+.media-thumb-name {
+  font-size: 10px;
+  font-weight: 700;
+  color: #ddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.media-thumb-cat {
+  font-size: 8.5px;
+  color: var(--accent-orange);
+  font-weight: 600;
+}
+
+/* Central Canvas Presentation Area */
+.studio-canvas-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--canvas-bg);
+  position: relative;
+  overflow: auto;
+  padding: 24px;
+}
+
+/* Floating Contextual Formatting Bar */
+.floating-format-bar {
+  position: absolute;
+  top: 18px;
+  background: #181818;
+  border: 1px solid var(--accent-orange);
+  border-radius: 8px;
+  padding: 4px 8px;
+  display: none;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.8), 0 0 15px rgba(255, 107, 0, 0.25);
+  z-index: 120;
+  animation: fadeInDown 0.15s ease;
+}
+.floating-format-bar.visible {
+  display: flex;
+}
+.fmt-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fmt-btn:hover {
+  background: #333;
+  color: #fff;
+}
+.fmt-divider {
+  width: 1px;
+  height: 18px;
+  background: #333;
+  margin: 0 2px;
+}
+.color-dot-pick {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+/* Image Selection Ring */
+.selected-editable-img {
+  outline: 2.5px solid var(--accent-orange) !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 16px rgba(255, 107, 0, 0.6) !important;
+  position: relative;
+}
+
+/* Bottom Presentation Control Dock */
+.canva-dock {
+  height: 50px;
+  background: var(--studio-panel);
+  border-top: 1px solid var(--studio-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 50;
+  flex-shrink: 0;
+}
+.dock-nav-btn {
+  background: #222;
+  border: 1px solid #333;
+  color: #fff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+.dock-nav-btn:hover {
+  background: var(--accent-orange);
+  color: #000;
+  border-color: var(--accent-orange);
+}
+.dock-counter {
+  font-size: 13px;
+  font-weight: 800;
+  color: #fff;
+  font-feature-settings: 'tnum';
+}
+.dock-dots {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.dock-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.dock-dot.active {
+  background: var(--accent-orange);
+  box-shadow: 0 0 8px var(--accent-orange);
+  transform: scale(1.3);
+}
+
+/* PRESENT MODE (Cleans UI to pure fullscreen presentation) */
+#studioApp.present-mode .canva-header,
+#studioApp.present-mode .canva-rail,
+#studioApp.present-mode .canva-drawer,
+#studioApp.present-mode .canva-dock,
+#studioApp.present-mode .floating-format-bar {
+  display: none !important;
+}
+#studioApp.present-mode .studio-canvas-area {
+  padding: 0;
+  background: #000;
+}
+#studioApp.present-mode .dw {
+  max-width: 100vw;
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  justify-content: center;
+}
+#studioApp.present-mode .sl {
+  border-radius: 0;
+  border: none;
+  max-height: 100vh;
+  max-width: 177.77vh;
+}
+#studioApp.present-mode .present-exit-hud {
+  display: flex;
+}
+
+.present-exit-hud {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 24px;
+  background: rgba(0,0,0,0.8);
+  border: 1px solid rgba(255,107,0,0.4);
+  border-radius: 20px;
+  padding: 6px 14px;
+  gap: 10px;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+}
+.exit-btn {
+  background: var(--accent-orange);
+  border: none;
+  color: #000;
+  font-weight: 800;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* Modals (Share & Notes) */
+.canva-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+.canva-modal-overlay.open {
+  display: flex;
+}
+.canva-modal {
+  background: #161616;
+  border: 1px solid var(--accent-orange);
+  border-radius: 10px;
+  width: 90%;
+  max-width: 520px;
+  padding: 24px;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.9), 0 0 30px rgba(255,107,0,0.25);
+  animation: scaleUp 0.2s ease;
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.modal-header h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+}
+.modal-close {
+  background: transparent;
+  border: none;
+  color: #888;
+  font-size: 20px;
+  cursor: pointer;
+}
+.modal-close:hover { color: #fff; }
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
 </style>
 </head>
 <body>
-<div class="dw" id="deckWrapper">
-  <div class="sl active" id="sl-1">
+
+<div id="studioApp">
+  <!-- TOP CANVA-STYLE APP HEADER -->
+  <header class="canva-header" id="canvaHeader">
+    <div class="header-left">
+      <div class="studio-brand-box">
+        <img src="LOGO/Primary Logo - Transparent (1).png" alt="FirstSelfie" class="studio-logo">
+        <input type="text" class="deck-title-input" id="deckTitleInput" value="The Identity Brand Blueprint 2026" spellcheck="false" title="Click to rename deck">
+      </div>
+      <div class="mode-switch-group">
+        <button class="mode-btn active" id="btnModeEdit" onclick="setStudioMode('edit')">
+          <span>&#9998;</span> Edit Mode
+        </button>
+        <button class="mode-btn" id="btnModePresent" onclick="setStudioMode('present')">
+          <span>&#9654;</span> Present (F)
+        </button>
+        <button class="mode-btn" id="btnModeNotes" onclick="toggleSpeakerNotes()">
+          <span>&#128488;</span> Script Notes
+        </button>
+      </div>
+    </div>
+
+    <div class="header-center">
+      <button class="history-btn" onclick="undoDeckAction()" title="Undo (Ctrl+Z)">&#8630;</button>
+      <button class="history-btn" onclick="redoDeckAction()" title="Redo (Ctrl+Y)">&#8631;</button>
+      <div class="save-tag" id="saveStatus">
+        <span class="save-dot"></span>
+        <span id="saveText">Saved to Browser</span>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <button class="canva-btn btn-pptx" onclick="exportToPPTX()" id="btnDownloadPPTX" title="Generate real Microsoft PowerPoint .pptx file">
+        <span>&#128229;</span> Download PPTX
+      </button>
+      <button class="canva-btn btn-pdf" onclick="exportToPDF()" title="Print or save as PDF">
+        <span>&#128438;</span> PDF
+      </button>
+      <button class="canva-btn btn-reset" onclick="resetToMasterDeck()" title="Revert all edits to master 26 slides">
+        <span>&#8634;</span> Reset Deck
+      </button>
+      <button class="canva-btn btn-share" onclick="openShareModal()">
+        <span>&#128279;</span> Share
+      </button>
+    </div>
+  </header>
+
+  <!-- MAIN WORKSPACE -->
+  <div class="studio-body">
+    <!-- LEFT RAIL ICONS -->
+    <nav class="canva-rail" id="canvaRail">
+      <button class="rail-btn active" id="railTab-slides" onclick="switchDrawerTab('slides')" title="Slide Manager">
+        <span class="rail-icon">&#9638;</span>
+        <span class="rail-label">Slides</span>
+      </button>
+      <button class="rail-btn" id="railTab-media" onclick="switchDrawerTab('media')" title="Built-in Proof & Local Media">
+        <span class="rail-icon">&#128444;</span>
+        <span class="rail-label">Media</span>
+      </button>
+      <button class="rail-btn" id="railTab-elements" onclick="switchDrawerTab('elements')" title="Brand Elements & Text">
+        <span class="rail-icon">&#9999;</span>
+        <span class="rail-label">Elements</span>
+      </button>
+      <button class="rail-btn" id="railTab-theme" onclick="switchDrawerTab('theme')" title="Brand Theme & Colors">
+        <span class="rail-icon">&#127912;</span>
+        <span class="rail-label">Theme</span>
+      </button>
+      <button class="rail-btn rail-collapse" onclick="toggleDrawerCollapse()" title="Collapse Panel">
+        <span class="rail-icon" id="collapseRailIcon">&#9664;</span>
+      </button>
+    </nav>
+
+    <!-- EXPANDABLE DRAWER -->
+    <aside class="canva-drawer" id="canvaDrawer">
+      <!-- 1. SLIDES PANEL -->
+      <div class="drawer-panel active" id="drawerPanel-slides">
+        <div class="drawer-header">
+          <h3>Slides (<span id="totalSlideCounter">26</span>)</h3>
+          <button class="canva-btn btn-pptx" style="padding:4px 8px;font-size:11px" onclick="addNewSlidePrompt()">+ Add</button>
+        </div>
+        <div class="drawer-content">
+          <div class="slides-list-scroll" id="slidesListView"></div>
+        </div>
+      </div>
+
+      <!-- 2. BUILT-IN MEDIA & PROOF ASSET PANEL -->
+      <div class="drawer-panel" id="drawerPanel-media">
+        <div class="drawer-header">
+          <h3>Proof & Media Library</h3>
+          <span style="font-size:10px;color:var(--accent-orange);font-weight:700" id="mediaCountIndicator">42 Files</span>
+        </div>
+        <div class="drawer-content">
+          <label class="upload-box-btn" for="fileInputUpload">
+            <span>+ Upload from Computer</span>
+            <input type="file" id="fileInputUpload" accept="image/*" style="display:none" onchange="handleComputerUpload(event)">
+          </label>
+
+          <div style="font-size:11px;color:#aaa;background:#1b1b1b;padding:8px 10px;border-radius:5px;margin-bottom:12px;border:1px solid #292929;line-height:1.4">
+            <strong style="color:var(--accent-orange)">Quick Swap:</strong> Click any image on the slide, then click any thumbnail below to instantly replace it.
+          </div>
+
+          <div class="media-filter-pills" id="mediaFilterPills">
+            <button class="filter-pill active" onclick="filterMediaCategory('all')">All</button>
+            <button class="filter-pill" onclick="filterMediaCategory('Logos & Branding')">Logos</button>
+            <button class="filter-pill" onclick="filterMediaCategory('Client Profiles')">Profiles</button>
+            <button class="filter-pill" onclick="filterMediaCategory('WhatsApp & Proof')">WhatsApp</button>
+            <button class="filter-pill" onclick="filterMediaCategory('Dashboards & Metrics')">Metrics</button>
+            <button class="filter-pill" onclick="filterMediaCategory('Uploads')">Uploads</button>
+          </div>
+
+          <input type="text" class="media-search-input" id="mediaSearchField" placeholder="Search proof assets..." oninput="handleMediaSearch(this.value)">
+
+          <div class="media-grid-container" id="mediaGrid"></div>
+        </div>
+      </div>
+
+      <!-- 3. ELEMENTS & TEXT PANEL -->
+      <div class="drawer-panel" id="drawerPanel-elements">
+        <div class="drawer-header">
+          <h3>Add Text & Brand Elements</h3>
+        </div>
+        <div class="drawer-content">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase">Typography</div>
+            <button class="canva-btn btn-pdf" style="justify-content:flex-start;padding:10px" onclick="insertNewElement('h1')">
+              <span style="font-size:16px;font-weight:800;color:#fff">Add Heading</span>
+            </button>
+            <button class="canva-btn btn-pdf" style="justify-content:flex-start;padding:10px" onclick="insertNewElement('h2')">
+              <span style="font-size:14px;font-weight:700;color:var(--accent-orange)">Add Sub-headline</span>
+            </button>
+            <button class="canva-btn btn-pdf" style="justify-content:flex-start;padding:10px" onclick="insertNewElement('p')">
+              <span style="font-size:12px;color:#bbb">Add Body Paragraph</span>
+            </button>
+
+            <div style="font-size:11px;font-weight:700;color:#888;text-transform:uppercase;margin-top:14px">FirstSelfie Badges & Cards</div>
+            <button class="canva-btn btn-pdf" style="justify-content:flex-start;padding:10px" onclick="insertNewElement('badge')">
+              <span class="badge" style="pointer-events:none">FIRSTSELFIE // BADGE</span>
+            </button>
+            <button class="canva-btn btn-pdf" style="justify-content:flex-start;padding:10px" onclick="insertNewElement('stat')">
+              <div style="text-align:left">
+                <div style="font-size:14px;font-weight:900;color:var(--accent-orange)">100% INBOUND</div>
+                <div style="font-size:9.5px;color:#888">Metric Highlight Box</div>
+              </div>
+            </button>
+            <button class="canva-btn btn-pdf" style="justify-content:flex-start;padding:10px" onclick="insertNewElement('card')">
+              <span style="font-size:12px;color:#fff">+ Blank Charcoal Surface Card</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. THEME & BRAND PALETTE PANEL -->
+      <div class="drawer-panel" id="drawerPanel-theme">
+        <div class="drawer-header">
+          <h3>Brand Palette</h3>
+        </div>
+        <div class="drawer-content">
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;align-items:center;gap:12px;background:#1c1c1c;padding:10px;border-radius:6px;cursor:pointer" onclick="applyColor('#FF6B00')">
+              <div style="width:26px;height:26px;border-radius:50%;background:#FF6B00;box-shadow:0 0 10px #FF6B00"></div>
+              <div><strong style="color:#fff;font-size:12px">Brand Orange</strong><div style="font-size:10px;color:#888">#FF6B00 (Primary Accent)</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;background:#1c1c1c;padding:10px;border-radius:6px;cursor:pointer" onclick="applyColor('#FF3D00')">
+              <div style="width:26px;height:26px;border-radius:50%;background:#FF3D00;box-shadow:0 0 10px #FF3D00"></div>
+              <div><strong style="color:#fff;font-size:12px">Ember Red</strong><div style="font-size:10px;color:#888">#FF3D00 (High-Tension)</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;background:#1c1c1c;padding:10px;border-radius:6px;cursor:pointer" onclick="applyColor('#FF9A3C')">
+              <div style="width:26px;height:26px;border-radius:50%;background:#FF9A3C;box-shadow:0 0 10px #FF9A3C"></div>
+              <div><strong style="color:#fff;font-size:12px">Warm Amber</strong><div style="font-size:10px;color:#888">#FF9A3C (Outcome Tags)</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;background:#1c1c1c;padding:10px;border-radius:6px;cursor:pointer" onclick="applyColor('#FFFFFF')">
+              <div style="width:26px;height:26px;border-radius:50%;background:#FFFFFF"></div>
+              <div><strong style="color:#fff;font-size:12px">Brand White</strong><div style="font-size:10px;color:#888">#FFFFFF (Headings)</div></div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;background:#1c1c1c;padding:10px;border-radius:6px;cursor:pointer" onclick="applyColor('#A6A6A6')">
+              <div style="width:26px;height:26px;border-radius:50%;background:#A6A6A6"></div>
+              <div><strong style="color:#fff;font-size:12px">Mid Gray</strong><div style="font-size:10px;color:#888">#A6A6A6 (Body text)</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER CANVAS AREA -->
+    <main class="studio-canvas-area" id="studioCanvasArea">
+      <!-- FLOATING TEXT FORMAT BAR -->
+      <div class="floating-format-bar" id="formatToolbar">
+        <button class="fmt-btn" onclick="formatDoc('bold')" title="Bold (Ctrl+B)"><strong>B</strong></button>
+        <button class="fmt-btn" onclick="formatDoc('italic')" title="Italic (Ctrl+I)"><em>I</em></button>
+        <button class="fmt-btn" onclick="formatDoc('underline')" title="Underline"><u>U</u></button>
+        <div class="fmt-divider"></div>
+        <div class="color-dot-pick" style="background:#FF6B00" onclick="applyColor('#FF6B00')" title="Brand Orange"></div>
+        <div class="color-dot-pick" style="background:#FF3D00" onclick="applyColor('#FF3D00')" title="Ember Red"></div>
+        <div class="color-dot-pick" style="background:#FFFFFF" onclick="applyColor('#FFFFFF')" title="White"></div>
+        <div class="color-dot-pick" style="background:#A6A6A6" onclick="applyColor('#A6A6A6')" title="Gray"></div>
+        <div class="fmt-divider"></div>
+        <button class="fmt-btn" onclick="formatDoc('justifyLeft')" title="Align Left">&#9776;</button>
+        <button class="fmt-btn" onclick="formatDoc('justifyCenter')" title="Align Center">&#8801;</button>
+        <button class="fmt-btn" onclick="formatDoc('justifyRight')" title="Align Right">&#9776;</button>
+        <div class="fmt-divider"></div>
+        <button class="fmt-btn" onclick="deleteActiveElement()" title="Delete Element" style="color:var(--accent-red)">&#128465;</button>
+      </div>
+
+      <!-- PRESENTATION 16:9 DECK CONTAINER -->
+      <div class="dw" id="deckWrapper">
+<div class="sl active" id="sl-1">
     <div class="acbar"></div>
     <div class="dg"></div>
     
@@ -1744,59 +2694,988 @@ svg text {
     <span class="sn">26 / 26</span>
   </div></div>
 
-<div class="nav" id="navBar">
-  <button class="nb" onclick="prevSlide()">&#8592; PREV</button>
-  <div id="dotC" style="display:flex;gap:6px;flex-wrap:wrap;justify-content:center;max-width:620px"></div>
-  <div class="sc" id="sc">01 / 26</div>
-  <button class="nb" onclick="nextSlide()">NEXT &#8594;</button>
-  <button class="fs-btn" onclick="toggleFullscreen()">&#x26F6; FULLSCREEN</button>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- BOTTOM DOCK NAVIGATION -->
+  <footer class="canva-dock" id="canvaDock">
+    <div style="display:flex;gap:8px">
+      <button class="dock-nav-btn" onclick="prevSlide()">&#8592; Prev</button>
+      <button class="dock-nav-btn" onclick="nextSlide()">Next &#8594;</button>
+    </div>
+
+    <div class="dock-dots" id="dockDotsContainer"></div>
+
+    <div style="display:flex;align-items:center;gap:14px">
+      <div class="dock-counter" id="dockSlideCounter">01 / 26</div>
+      <button class="dock-nav-btn" onclick="setStudioMode('present')" title="Present Fullscreen (F)">
+        <span>&#x26F6;</span> Fullscreen
+      </button>
+    </div>
+  </footer>
+
+  <!-- PRESENT MODE EXIT HUD -->
+  <div class="present-exit-hud" id="presentExitHUD">
+    <span style="font-size:12px;color:#fff;font-weight:700">Slide <span id="presentCounter">1</span> / 26</span>
+    <button class="exit-btn" onclick="setStudioMode('edit')">Exit (Esc)</button>
+  </div>
 </div>
 
+<!-- CANVA SHARE MODAL -->
+<div class="canva-modal-overlay" id="shareModalOverlay" onclick="if(event.target===this) closeShareModal()">
+  <div class="canva-modal">
+    <div class="modal-header">
+      <h3>Share Presentation</h3>
+      <button class="modal-close" onclick="closeShareModal()">&times;</button>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <div>
+        <label style="font-size:11.5px;color:#888;font-weight:600">Direct Slide Link</label>
+        <div style="display:flex;gap:8px;margin-top:4px">
+          <input type="text" id="shareDirectLinkInput" readonly style="flex:1;background:#111;border:1px solid #333;color:#fff;padding:8px 10px;border-radius:5px;font-size:12px">
+          <button class="canva-btn btn-pptx" onclick="copyShareLink()">Copy</button>
+        </div>
+      </div>
+      <div>
+        <label style="font-size:11.5px;color:#888;font-weight:600">View-Only Client Presentation Link</label>
+        <div style="display:flex;gap:8px;margin-top:4px">
+          <input type="text" id="shareViewOnlyLinkInput" readonly style="flex:1;background:#111;border:1px solid #333;color:#fff;padding:8px 10px;border-radius:5px;font-size:12px">
+          <button class="canva-btn btn-pdf" onclick="copyViewOnlyLink()">Copy</button>
+        </div>
+      </div>
+      <div style="border-top:1px solid #282828;padding-top:12px;display:flex;gap:10px">
+        <button class="canva-btn btn-pptx" style="flex:1" onclick="exportToPPTX()">&#128229; Download PPTX</button>
+        <button class="canva-btn btn-pdf" style="flex:1" onclick="exportToPDF()">&#128438; Save PDF</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SCRIPT SPEAKER NOTES MODAL -->
+<div class="canva-modal-overlay" id="notesModalOverlay" onclick="if(event.target===this) toggleSpeakerNotes()">
+  <div class="canva-modal" style="max-width:640px">
+    <div class="modal-header">
+      <div>
+        <h3 id="notesModalTitle">Slide 01: Speaker Script</h3>
+        <span style="font-size:11px;color:var(--accent-orange);font-weight:700">FIRSTSELFIE VSL & EDITORIAL SCRIPT</span>
+      </div>
+      <button class="modal-close" onclick="toggleSpeakerNotes()">&times;</button>
+    </div>
+    <div style="background:#111;border:1px solid #282828;border-radius:6px;padding:16px;max-height:360px;overflow-y:auto;line-height:1.6;font-size:13.5px;color:#ddd" id="notesContentText">
+    </div>
+    <div style="margin-top:14px;display:flex;justify-content:space-between;align-items:center">
+      <div style="font-size:12px;color:#888">
+        Elapsed Timer: <strong id="notesTimer" style="color:#fff;font-feature-settings:'tnum'">00:00</strong>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="canva-btn btn-pdf" onclick="toggleTimer()" id="btnTimerControl">Start Timer</button>
+        <button class="canva-btn btn-pptx" onclick="nextSlide();updateSpeakerNotesView();">Next Slide &#8594;</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CANVA PRESENTATION STUDIO JAVASCRIPT ENGINE -->
 <script>
-const N = 26;
-let c = 1;
-const dc = document.getElementById('dotC');
-for (let i = 1; i <= N; i++) {
-  const d = document.createElement('div');
-  d.className = 'nd' + (i === 1 ? ' active' : '');
-  d.id = 'd-' + i;
-  d.title = 'Slide ' + i;
-  d.onclick = () => go(i);
-  dc.appendChild(d);
-}
-function go(n) {
-  document.getElementById('sl-' + c).classList.remove('active');
-  document.getElementById('d-' + c).classList.remove('active');
-  c = n;
-  document.getElementById('sl-' + c).classList.add('active');
-  document.getElementById('d-' + c).classList.add('active');
-  document.getElementById('sc').textContent = String(c).padStart(2,'0') + ' / ' + String(N).padStart(2,'0');
-  document.getElementById('sl-' + c).scrollIntoView({behavior:'smooth',block:'start'});
-}
-function nextSlide() { if (c < N) go(c + 1); }
-function prevSlide() { if (c > 1) go(c - 1); }
-function toggleFullscreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen().catch(err => {
-      alert('Error attempting to enable fullscreen: ' + err.message);
-    });
-  } else {
-    document.exitFullscreen();
+// Catalog of Proof and Local Assets
+const ASSET_CATALOG = [
+  {
+    "name": "Primary Logo   Transparent (1)",
+    "path": "LOGO\\Primary Logo - Transparent (1).png",
+    "category": "Logos & Branding"
+  },
+  {
+    "name": "Secondary Logo   Transparent",
+    "path": "LOGO\\Secondary Logo - Transparent.png",
+    "category": "Logos & Branding"
+  },
+  {
+    "name": "IMG 20260703 001346",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\IMG_20260703_001346.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "IMG 20260703 134828",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\IMG_20260703_134828.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 09 14 31 02 118 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-09-14-31-02-118_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 10 00 40 45 026 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-10-00-40-45-026_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 11 06 18 44 626 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-11-06-18-44-626_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 13 23 24 21 098 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-13-23-24-21-098_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 13 23 37 12 703 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-13-23-37-12-703_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 13 23 37 33 694 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-13-23-37-33-694_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 13 23 37 44 843 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-13-23-37-44-843_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 13 23 40 47 087 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-13-23-40-47-087_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 05 24 17 59 37 814 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-05-24-17-59-37-814_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 11 38 079 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-11-38-079_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 11 41 583 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-11-41-583_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 11 50 204 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-11-50-204_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 12 14 207 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-12-14-207_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 12 23 051 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-12-23-051_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 14 49 436 com.instagram.android(1)",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-14-49-436_com.instagram.android(1).jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 14 49 436 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-14-49-436_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 17 48 984 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-17-48-984_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 18 00 809 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-18-00-809_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 18 14 540 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-04-13-18-14-540_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "Screenshot 2026 07 28 23 18 22 189 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Screenshot_2026-07-28-23-18-22-189_com.instagram.android.jpg",
+    "category": "Dashboards & Metrics"
+  },
+  {
+    "name": "instagram comments 9x16",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Insta story testimonial\\instagram_comments_9x16.png",
+    "category": "Instagram & Proof"
+  },
+  {
+    "name": "Dr. Hariharan profile",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\Dr. Hariharan profile.jpg",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "Finance with Raghu   Bio",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\Finance with Raghu - Bio.jpg",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "Finance with Raghu Profile",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\Finance with Raghu Profile.jpg",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "hariharan avatar",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\hariharan_avatar.png",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "hariharan preview",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\hariharan_preview.jpg",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "raghu avatar",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\raghu_avatar.png",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "raghu preview",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\raghu_preview.jpg",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "thoufiq avatar",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\thoufiq_avatar.png",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "thoufiq preview",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\thoufiq_preview.jpg",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "White Paper Production",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\White Paper Production.jpeg",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "whitepaper avatar",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\whitepaper_avatar.png",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "whitepaper preview",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Profile\\whitepaper_preview.jpg",
+    "category": "Client Profiles"
+  },
+  {
+    "name": "IMG 20260728 232154",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Whatsapp text testimonial\\IMG_20260728_232154.jpg",
+    "category": "WhatsApp & Proof"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 15 51 706 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Whatsapp text testimonial\\Screenshot_2026-07-04-13-15-51-706_com.instagram.android.jpg",
+    "category": "WhatsApp & Proof"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 15 59 708 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Whatsapp text testimonial\\Screenshot_2026-07-04-13-15-59-708_com.instagram.android.jpg",
+    "category": "WhatsApp & Proof"
+  },
+  {
+    "name": "Screenshot 2026 07 04 13 53 49 416 com.instagram.android",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Whatsapp text testimonial\\Screenshot_2026-07-04-13-53-49-416_com.instagram.android.jpg",
+    "category": "WhatsApp & Proof"
+  },
+  {
+    "name": "Thoufiq",
+    "path": "Proof-20260906T155032Z-1-001\\Proof\\Whatsapp text testimonial\\Thoufiq.jpg",
+    "category": "WhatsApp & Proof"
+  }
+];
+const SPEAKER_NOTES = {
+  "1": "Slide 01: Welcome the viewer. Introduce FirstSelfie 2026 Edition. Emphasize that generic, copycat personal branding is dead. We are presenting the 3-Star Architecture to engineer an uncopyable Identity Brand.",
+  "2": "Slide 02: Walk through the multi-niche proof matrix. Highlight Finance With Raghu (+45K HNW followers), Dr. Hariharan (orthopedic surgeon authority), White Paper House (\u20b90 ad spend, 100% inbound B2B deals), and Wedding Dhanushya. Then touch on AI Systems (Nuke Code), SaaS (Sarathi), and B2B (Deepan).",
+  "3": "Slide 03: The Macro Shift. 99% of founder content looks identical. Explain the commodity trap and why attention without category authority produces zero pipeline.",
+  "4": "Slide 04: The Plagiarism Problem. Side-by-side comparison of genuine viral thought-leadership versus the cheap copycat carousels that flood feeds today.",
+  "5": "Slide 05: The FirstSelfie Thesis. The Identity Brand Formula. Audience + Perception + Conversion = Category Monopoly.",
+  "6": "Slide 06: Proof Case Study: White Paper House. Detail the 531+ to 7,000+ scaling journey, zero ad spend, and how founder authority drives enterprise contracts.",
+  "7": "Slide 07: The 30-Day Launch Roadmap. Phase 1 Foundation: Visual identity, content codex, and positioning framework.",
+  "8": "Slide 08: The 30-Day Roadmap Phase 2: Production, multi-platform syndication, and high-converting inbound funnels.",
+  "9": "Slide 09: Pillar 1 Introduction: The Identity Codex. Why your core belief system and category point-of-view must be uncopyable.",
+  "10": "Slide 10: Codex Architecture. Breakdown of the 4 narrative pillars that make founder perspectives immune to commoditization.",
+  "11": "Slide 11: Belief Shift Engineering. Transforming passive scrollers into passionate brand advocates through polarizing industry truths.",
+  "12": "Slide 12: Content Matrix & Formats. The exact distribution ratio: 40% Authority, 30% Proof/Case Study, 20% Category Shift, 10% Culture.",
+  "13": "Slide 13: Pillar 2 Introduction: The Media Engine. Instagram and YouTube scaling proof: 40.9K followers, 11 Lakh accounts reached.",
+  "14": "Slide 14: Engine HUD Status: Pillar 1 Codex Locked. Now transitioning into Pillar 2 Engine execution.",
+  "15": "Slide 15: Production Protocol. Turnkey filming workflows requiring only 2 hours of founder time per week.",
+  "16": "Slide 16: Cinematic Video Standards. Visual framing, lighting, micro-hooks, and retention-engineered editing.",
+  "17": "Slide 17: Multi-Platform Syndication. Taking one core recording and syndicating to YouTube Shorts, Reels, LinkedIn, and X.",
+  "18": "Slide 18: Pillar 2 Summary: Consistency at Scale. Never missing an upload while maintaining executive production value.",
+  "19": "Slide 19: Pillar 3 Introduction: The APA Conversion Matrix. Audience, Perception, Action.",
+  "20": "Slide 20: APA Architecture. Mapping viewer attention directly into high-ticket inbound sales pipeline.",
+  "21": "Slide 21: High-Ticket Lead Funnel. How DMs and comment triggers qualify prospective enterprise buyers automatically.",
+  "22": "Slide 22: Omnichannel Distribution Proof. 7.0M Reel reach, 2.7K comments, and engaged founder community.",
+  "23": "Slide 23: Complete 3-Star Architecture Summary. Pillar 1 Codex + Pillar 2 Engine + Pillar 3 APA Matrix working in unison.",
+  "24": "Slide 24: Inbound Validation & DMs. Real client conversations, bookings, and verified inbound inquiries.",
+  "25": "Slide 25: Investment & Partner Model. Exclusive 90-day sprint engagement with dedicated executive team.",
+  "26": "Slide 26: Final Call to Action. Secure your category monopoly for 2026. Schedule your Private Strategy Session."
+};
+
+let currentSlide = 1;
+const totalSlides = 26;
+let studioMode = 'edit';
+let selectedImageElement = null;
+let activeEditableElement = null;
+let timerInterval = null;
+let timerSeconds = 0;
+let isTimerRunning = false;
+
+// Initialize Canva Studio
+document.addEventListener('DOMContentLoaded', () => {
+  initSlideNavigator();
+  initMediaGallery();
+  initEditableSurfaces();
+  initAutoSave();
+  checkURLParameters();
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SLIDE NAVIGATION & MANAGEMENT
+// ─────────────────────────────────────────────────────────────────────────────
+function initSlideNavigator() {
+  const listContainer = document.getElementById('slidesListView');
+  const dotsContainer = document.getElementById('dockDotsContainer');
+  listContainer.innerHTML = '';
+  dotsContainer.innerHTML = '';
+
+  for (let i = 1; i <= totalSlides; i++) {
+    // Dock dot
+    const dot = document.createElement('div');
+    dot.className = 'dock-dot' + (i === currentSlide ? ' active' : '');
+    dot.id = 'dock-dot-' + i;
+    dot.title = 'Slide ' + i;
+    dot.onclick = () => goToSlide(i);
+    dotsContainer.appendChild(dot);
+
+    // Sidebar card
+    const card = document.createElement('div');
+    card.className = 'slide-card-item' + (i === currentSlide ? ' active' : '');
+    card.id = 'slide-card-' + i;
+    card.onclick = (e) => {
+      if (!e.target.closest('.card-act-btn')) goToSlide(i);
+    };
+
+    // Extract slide headline if available
+    const slideElem = document.getElementById('sl-' + i);
+    const hl = slideElem ? (slideElem.querySelector('.hl, h1, h2')?.textContent || 'Slide ' + i) : 'Slide ' + i;
+
+    card.innerHTML = `
+      <div class="slide-card-num">${String(i).padStart(2, '0')}</div>
+      <div class="slide-card-info">
+        <div class="slide-card-title">${hl.trim().replace(/\s+/g, ' ')}</div>
+        <div class="slide-card-sub">Slide ${i} of ${totalSlides}</div>
+      </div>
+      <div class="slide-card-actions">
+        <button class="card-act-btn" onclick="duplicateSlide(${i})" title="Duplicate Slide">&#x2398;</button>
+      </div>
+    `;
+    listContainer.appendChild(card);
   }
 }
+
+function goToSlide(n) {
+  if (n < 1 || n > totalSlides) return;
+  document.getElementById('sl-' + currentSlide)?.classList.remove('active');
+  document.getElementById('slide-card-' + currentSlide)?.classList.remove('active');
+  document.getElementById('dock-dot-' + currentSlide)?.classList.remove('active');
+
+  currentSlide = n;
+
+  document.getElementById('sl-' + currentSlide)?.classList.add('active');
+  document.getElementById('slide-card-' + currentSlide)?.classList.add('active');
+  document.getElementById('dock-dot-' + currentSlide)?.classList.add('active');
+
+  const padded = String(currentSlide).padStart(2, '0') + ' / ' + String(totalSlides).padStart(2, '0');
+  document.getElementById('dockSlideCounter').textContent = padded;
+  document.getElementById('presentCounter').textContent = currentSlide;
+
+  // Scroll thumbnail into view
+  document.getElementById('slide-card-' + currentSlide)?.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+
+  // Update speaker notes if open
+  updateSpeakerNotesView();
+  hideFormatToolbar();
+  deselectImage();
+}
+
+function nextSlide() {
+  if (currentSlide < totalSlides) goToSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  if (currentSlide > 1) goToSlide(currentSlide - 1);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// STUDIO MODES (Edit vs. Present)
+// ─────────────────────────────────────────────────────────────────────────────
+function setStudioMode(mode) {
+  studioMode = mode;
+  const app = document.getElementById('studioApp');
+  document.getElementById('btnModeEdit')?.classList.toggle('active', mode === 'edit');
+  document.getElementById('btnModePresent')?.classList.toggle('active', mode === 'present');
+
+  if (mode === 'present') {
+    app.classList.add('present-mode');
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    }
+    hideFormatToolbar();
+    deselectImage();
+  } else {
+    app.classList.remove('present-mode');
+    if (document.fullscreenElement) {
+      document.exitFullscreen().catch(() => {});
+    }
+    initEditableSurfaces();
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MEDIA GALLERY & INBUILT PROOF ASSETS
+// ─────────────────────────────────────────────────────────────────────────────
+function initMediaGallery() {
+  renderMediaGrid(ASSET_CATALOG);
+}
+
+function renderMediaGrid(items) {
+  const grid = document.getElementById('mediaGrid');
+  grid.innerHTML = '';
+
+  items.forEach(asset => {
+    const card = document.createElement('div');
+    card.className = 'media-thumb-card';
+    card.title = 'Click to use: ' + asset.name;
+    card.onclick = () => handleAssetClick(asset.path);
+
+    card.innerHTML = `
+      <div class="media-thumb-img">
+        <img src="${asset.path}" alt="${asset.name}" loading="lazy">
+      </div>
+      <div class="media-thumb-info">
+        <div class="media-thumb-name">${asset.name}</div>
+        <div class="media-thumb-cat">${asset.category}</div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function filterMediaCategory(cat) {
+  document.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+  event.target.classList.add('active');
+
+  if (cat === 'all') {
+    renderMediaGrid(ASSET_CATALOG);
+  } else if (cat === 'Uploads') {
+    const uploads = ASSET_CATALOG.filter(a => a.category === 'Uploads');
+    renderMediaGrid(uploads);
+  } else {
+    const filtered = ASSET_CATALOG.filter(a => a.category === cat);
+    renderMediaGrid(filtered);
+  }
+}
+
+function handleMediaSearch(query) {
+  const q = query.toLowerCase().trim();
+  const matched = ASSET_CATALOG.filter(a => a.name.toLowerCase().includes(q) || a.category.toLowerCase().includes(q));
+  renderMediaGrid(matched);
+}
+
+function handleAssetClick(assetPath) {
+  if (selectedImageElement) {
+    // Swap selected image!
+    selectedImageElement.src = assetPath;
+    selectedImageElement.style.transition = 'transform 0.2s';
+    selectedImageElement.style.transform = 'scale(1.04)';
+    setTimeout(() => { selectedImageElement.style.transform = 'scale(1)'; }, 200);
+    showToast('Image successfully replaced with: ' + assetPath.split('/').pop());
+    triggerAutoSave();
+  } else {
+    showToast('Select an image on Slide ' + currentSlide + ' to swap it with this asset.');
+  }
+}
+
+function handleComputerUpload(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function(evt) {
+    const dataUrl = evt.target.result;
+    // Add to catalog
+    const uploadItem = {
+      name: file.name,
+      path: dataUrl,
+      category: 'Uploads'
+    };
+    ASSET_CATALOG.unshift(uploadItem);
+
+    // If image selected, immediately replace!
+    if (selectedImageElement) {
+      selectedImageElement.src = dataUrl;
+      showToast('Image replaced with your uploaded file!');
+    } else {
+      showToast('File uploaded! Click any image on the slide to apply it.');
+      switchDrawerTab('media');
+      filterMediaCategory('Uploads');
+    }
+    renderMediaGrid(ASSET_CATALOG);
+    triggerAutoSave();
+  };
+  reader.readAsDataURL(file);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// IN-PLACE EDITING & CONTEXTUAL TOOLS
+// ─────────────────────────────────────────────────────────────────────────────
+function initEditableSurfaces() {
+  if (studioMode !== 'edit') return;
+
+  // Make text elements editable
+  document.querySelectorAll('.sl h1, .sl h2, .sl h3, .sl p, .sl span, .sl .badge, .sl .bt, .sl .stat-val').forEach(el => {
+    el.contentEditable = 'true';
+    el.spellcheck = false;
+
+    el.onfocus = () => {
+      activeEditableElement = el;
+      showFormatToolbarFor(el);
+    };
+
+    el.oninput = () => {
+      triggerAutoSave();
+    };
+  });
+
+  // Make images selectable for quick replace
+  document.querySelectorAll('.sl img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.onclick = (e) => {
+      e.stopPropagation();
+      selectImage(img);
+    };
+  });
+
+  // Click outside deselects
+  document.getElementById('studioCanvasArea').onclick = (e) => {
+    if (!e.target.closest('#formatToolbar') && !e.target.closest('.sl img') && !e.target.isContentEditable) {
+      deselectImage();
+      hideFormatToolbar();
+    }
+  };
+}
+
+function selectImage(img) {
+  deselectImage();
+  selectedImageElement = img;
+  img.classList.add('selected-editable-img');
+  switchDrawerTab('media');
+  showToast('Image selected! Click any asset in the Media drawer to swap it.');
+}
+
+function deselectImage() {
+  if (selectedImageElement) {
+    selectedImageElement.classList.remove('selected-editable-img');
+    selectedImageElement = null;
+  }
+}
+
+function showFormatToolbarFor(el) {
+  const tb = document.getElementById('formatToolbar');
+  tb.classList.add('visible');
+}
+
+function hideFormatToolbar() {
+  document.getElementById('formatToolbar')?.classList.remove('visible');
+}
+
+function formatDoc(cmd, val = null) {
+  document.execCommand(cmd, false, val);
+  triggerAutoSave();
+}
+
+function applyColor(hex) {
+  document.execCommand('foreColor', false, hex);
+  triggerAutoSave();
+}
+
+function deleteActiveElement() {
+  if (selectedImageElement) {
+    selectedImageElement.remove();
+    deselectImage();
+    showToast('Image deleted.');
+    triggerAutoSave();
+  } else if (activeEditableElement) {
+    activeEditableElement.remove();
+    hideFormatToolbar();
+    showToast('Element deleted.');
+    triggerAutoSave();
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ADD NEW ELEMENTS
+// ─────────────────────────────────────────────────────────────────────────────
+function insertNewElement(type) {
+  const activeSlide = document.getElementById('sl-' + currentSlide);
+  if (!activeSlide) return;
+
+  const contentZone = activeSlide.querySelector('[style*="display:flex"], [style*="flex:1"]') || activeSlide;
+  const newEl = document.createElement('div');
+
+  if (type === 'h1') {
+    newEl.innerHTML = '<h2 class="hl" style="margin:10px 0" contenteditable="true">New Bold Headline</h2>';
+  } else if (type === 'h2') {
+    newEl.innerHTML = '<h3 style="font-size:20px;font-weight:700;color:var(--bo);margin:8px 0" contenteditable="true">New Sub-headline</h3>';
+  } else if (type === 'p') {
+    newEl.innerHTML = '<p class="bt" style="margin:8px 0" contenteditable="true">Enter descriptive text here. Fully editable in real-time.</p>';
+  } else if (type === 'badge') {
+    newEl.innerHTML = '<div class="badge" style="margin:6px 0" contenteditable="true">NEW CATEGORY BADGE</div>';
+  } else if (type === 'stat') {
+    newEl.innerHTML = `
+      <div style="background:var(--dc);border:1px solid rgba(255,107,0,0.3);padding:12px;border-radius:6px;display:inline-block;margin:8px 0">
+        <div style="font-size:20px;font-weight:900;color:var(--bo)" contenteditable="true">100% INBOUND</div>
+        <div style="font-size:10px;color:#888;font-weight:700" contenteditable="true">KEY METRIC DESCRIPTION</div>
+      </div>
+    `;
+  } else if (type === 'card') {
+    newEl.innerHTML = `
+      <div class="card" style="margin:10px 0;padding:16px" contenteditable="true">
+        <h3 style="color:#fff;font-size:16px;margin-bottom:6px">Surface Card Title</h3>
+        <p style="color:#aaa;font-size:13px">Add detailed notes or proof breakdown inside this surface container.</p>
+      </div>
+    `;
+  }
+
+  contentZone.appendChild(newEl);
+  initEditableSurfaces();
+  showToast('New ' + type + ' added to Slide ' + currentSlide);
+  triggerAutoSave();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DRAWERS & TABS
+// ─────────────────────────────────────────────────────────────────────────────
+function switchDrawerTab(tabName) {
+  document.querySelectorAll('.rail-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('railTab-' + tabName)?.classList.add('active');
+
+  document.querySelectorAll('.drawer-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('drawerPanel-' + tabName)?.classList.add('active');
+
+  // Ensure drawer is open
+  document.getElementById('canvaDrawer').classList.remove('collapsed');
+  document.getElementById('collapseRailIcon').innerHTML = '&#9664;';
+}
+
+function toggleDrawerCollapse() {
+  const drawer = document.getElementById('canvaDrawer');
+  drawer.classList.toggle('collapsed');
+  const isCollapsed = drawer.classList.contains('collapsed');
+  document.getElementById('collapseRailIcon').innerHTML = isCollapsed ? '&#9654;' : '&#9664;';
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// NATIVE POWERPOINT (.PPTX) EXPORT ENGINE
+// ─────────────────────────────────────────────────────────────────────────────
+async function exportToPPTX() {
+  const btn = document.getElementById('btnDownloadPPTX');
+  const origText = btn.innerHTML;
+  btn.innerHTML = '<span>&#8987;</span> Generating PPTX...';
+  btn.style.pointerEvents = 'none';
+
+  try {
+    if (typeof PptxGenJS === 'undefined') {
+      throw new Error('PptxGenJS library is loading. Please try again in 2 seconds.');
+    }
+
+    const pptx = new PptxGenJS();
+    pptx.layout = 'LAYOUT_16x9';
+    pptx.author = 'FirstSelfie';
+    pptx.company = 'FirstSelfie';
+    pptx.title = document.getElementById('deckTitleInput').value || 'First Selfie Blueprint 2026';
+
+    const slides = document.querySelectorAll('.sl');
+
+    for (let i = 0; i < slides.length; i++) {
+      const slideDom = slides[i];
+      const slideNum = i + 1;
+      const pSlide = pptx.addSlide();
+
+      // Brand Black Canvas
+      pSlide.background = { color: '0A0A0A' };
+
+      // Orange Accent Bar on left
+      pSlide.addShape(pptx.ShapeType.rect, {
+        x: 0, y: 0, w: 0.1, h: 7.5,
+        fill: { color: 'FF6B00' }
+      });
+
+      // Watermark Pill
+      pSlide.addText('FIRSTSELFIE // 2026', {
+        x: 10.2, y: 0.25, w: 2.8, h: 0.4,
+        fontSize: 10, bold: true, color: 'FF6B00',
+        align: 'right', fontFace: 'Poppins'
+      });
+
+      // Extract Headings & Copy
+      const badgeText = slideDom.querySelector('.badge')?.innerText;
+      if (badgeText) {
+        pSlide.addText(badgeText, {
+          x: 0.8, y: 0.5, w: 10.0, h: 0.35,
+          fontSize: 10, bold: true, color: 'FF6B00',
+          fontFace: 'Poppins'
+        });
+      }
+
+      const headlineText = slideDom.querySelector('.hl, h1, h2')?.innerText;
+      if (headlineText) {
+        pSlide.addText(headlineText, {
+          x: 0.8, y: badgeText ? 0.9 : 0.6, w: 11.0, h: 1.1,
+          fontSize: 24, bold: true, color: 'FFFFFF',
+          fontFace: 'Poppins', lineSpacing: 28
+        });
+      }
+
+      // Speaker Notes
+      if (SPEAKER_NOTES[slideNum]) {
+        pSlide.addNotes(SPEAKER_NOTES[slideNum]);
+      }
+
+      // Extract and convert slide images
+      const images = slideDom.querySelectorAll('img');
+      for (let imgIdx = 0; imgIdx < images.length && imgIdx < 4; imgIdx++) {
+        const img = images[imgIdx];
+        if (!img.src || img.src.includes('Primary Logo')) continue;
+
+        try {
+          const base64Data = await getBase64FromImage(img);
+          if (base64Data) {
+            // Calculate proportional placement
+            const posX = 0.8 + (imgIdx * 3.0);
+            pSlide.addImage({
+              data: base64Data,
+              x: posX,
+              y: 2.4,
+              w: 2.7,
+              h: 4.4,
+              sizing: { type: 'contain' }
+            });
+          }
+        } catch(e) {
+          console.warn('Could not embed image ' + imgIdx + ' into slide ' + slideNum, e);
+        }
+      }
+    }
+
+    const fileName = (document.getElementById('deckTitleInput').value.replace(/[^a-zA-Z0-9]/g, '_')) + '.pptx';
+    await pptx.writeFile({ fileName: fileName });
+    showToast('PowerPoint deck (' + fileName + ') successfully downloaded!');
+  } catch (err) {
+    alert('Export to PPTX: ' + err.message);
+  } finally {
+    btn.innerHTML = origText;
+    btn.style.pointerEvents = 'auto';
+  }
+}
+
+function getBase64FromImage(img) {
+  return new Promise((resolve) => {
+    if (img.src.startsWith('data:')) {
+      return resolve(img.src);
+    }
+    const canvas = document.createElement('canvas');
+    canvas.width = img.naturalWidth || img.width || 300;
+    canvas.height = img.naturalHeight || img.height || 300;
+    const ctx = canvas.getContext('2d');
+    const imageObj = new Image();
+    imageObj.crossOrigin = 'Anonymous';
+    imageObj.onload = () => {
+      ctx.drawImage(imageObj, 0, 0);
+      try {
+        resolve(canvas.toDataURL('image/jpeg', 0.85));
+      } catch(e) {
+        resolve(null);
+      }
+    };
+    imageObj.onerror = () => resolve(null);
+    imageObj.src = img.src;
+  });
+}
+
+function exportToPDF() {
+  window.print();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SHARE MODAL & LINKS
+// ─────────────────────────────────────────────────────────────────────────────
+function openShareModal() {
+  const loc = window.location.href.split('#')[0].split('?')[0];
+  document.getElementById('shareDirectLinkInput').value = loc + '#slide-' + currentSlide;
+  document.getElementById('shareViewOnlyLinkInput').value = loc + '?mode=view#slide-' + currentSlide;
+  document.getElementById('shareModalOverlay').classList.add('open');
+}
+
+function closeShareModal() {
+  document.getElementById('shareModalOverlay').classList.remove('open');
+}
+
+function copyShareLink() {
+  const input = document.getElementById('shareDirectLinkInput');
+  navigator.clipboard.writeText(input.value);
+  showToast('Copied direct slide link to clipboard!');
+}
+
+function copyViewOnlyLink() {
+  const input = document.getElementById('shareViewOnlyLinkInput');
+  navigator.clipboard.writeText(input.value);
+  showToast('Copied View-Only presentation link!');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SPEAKER NOTES & TIMER
+// ─────────────────────────────────────────────────────────────────────────────
+function toggleSpeakerNotes() {
+  const modal = document.getElementById('notesModalOverlay');
+  modal.classList.toggle('open');
+  if (modal.classList.contains('open')) {
+    updateSpeakerNotesView();
+  }
+}
+
+function updateSpeakerNotesView() {
+  const title = document.getElementById('notesModalTitle');
+  const body = document.getElementById('notesContentText');
+  if (!title || !body) return;
+
+  title.textContent = 'Slide ' + String(currentSlide).padStart(2, '0') + ': Script Notes';
+  body.textContent = SPEAKER_NOTES[currentSlide] || 'Deliver key insights for slide ' + currentSlide + '. Reinforce FirstSelfie authority principles.';
+}
+
+function toggleTimer() {
+  const btn = document.getElementById('btnTimerControl');
+  if (isTimerRunning) {
+    clearInterval(timerInterval);
+    isTimerRunning = false;
+    btn.textContent = 'Resume Timer';
+  } else {
+    isTimerRunning = true;
+    btn.textContent = 'Pause Timer';
+    timerInterval = setInterval(() => {
+      timerSeconds++;
+      const mins = String(Math.floor(timerSeconds / 60)).padStart(2, '0');
+      const secs = String(timerSeconds % 60).padStart(2, '0');
+      document.getElementById('notesTimer').textContent = mins + ':' + secs;
+    }, 1000);
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// LOCALSTORAGE AUTO-SAVE & STATE
+// ─────────────────────────────────────────────────────────────────────────────
+let autoSaveTimeout = null;
+function triggerAutoSave() {
+  document.getElementById('saveStatus').innerHTML = '<span style="color:var(--accent-amber)">● Saving...</span>';
+  clearTimeout(autoSaveTimeout);
+  autoSaveTimeout = setTimeout(() => {
+    try {
+      const deckContent = document.getElementById('deckWrapper').innerHTML;
+      const title = document.getElementById('deckTitleInput').value;
+      localStorage.setItem('firstselfie_saved_deck', deckContent);
+      localStorage.setItem('firstselfie_deck_title', title);
+      document.getElementById('saveStatus').innerHTML = '<span class="save-dot"></span><span>Saved to Browser</span>';
+    } catch(e) {
+      console.warn('LocalStorage save error', e);
+    }
+  }, 800);
+}
+
+function initAutoSave() {
+  const savedTitle = localStorage.getItem('firstselfie_deck_title');
+  if (savedTitle) {
+    document.getElementById('deckTitleInput').value = savedTitle;
+  }
+  // Note: We maintain master slides as primary, and offer reset anytime.
+}
+
+function resetToMasterDeck() {
+  if (confirm('Are you sure you want to revert all custom text edits and image swaps back to the master 26-slide deck?')) {
+    localStorage.removeItem('firstselfie_saved_deck');
+    localStorage.removeItem('firstselfie_deck_title');
+    window.location.reload();
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HOTKEYS & TOUCH
+// ─────────────────────────────────────────────────────────────────────────────
 document.addEventListener('keydown', e => {
-  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); nextSlide(); }
-  if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); prevSlide(); }
-  if (e.key.toLowerCase() === 'f') { e.preventDefault(); toggleFullscreen(); }
-  if (e.key === 'Home') { e.preventDefault(); go(1); }
-  if (e.key === 'End') { e.preventDefault(); go(N); }
+  if (e.target.isContentEditable || e.target.tagName === 'INPUT') return;
+
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+    e.preventDefault(); nextSlide();
+  } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+    e.preventDefault(); prevSlide();
+  } else if (e.key.toLowerCase() === 'f') {
+    e.preventDefault();
+    setStudioMode(studioMode === 'present' ? 'edit' : 'present');
+  } else if (e.key === 'Escape') {
+    if (studioMode === 'present') setStudioMode('edit');
+    closeShareModal();
+    document.getElementById('notesModalOverlay').classList.remove('open');
+  } else if (e.key.toLowerCase() === 'n') {
+    e.preventDefault();
+    toggleSpeakerNotes();
+  } else if (e.key === 'Home') {
+    e.preventDefault(); goToSlide(1);
+  } else if (e.key === 'End') {
+    e.preventDefault(); goToSlide(totalSlides);
+  }
 });
-let tx = 0;
-document.addEventListener('touchstart', e => { tx = e.changedTouches[0].screenX; }, {passive:true});
-document.addEventListener('touchend', e => {
-  const dx = e.changedTouches[0].screenX - tx;
-  if (Math.abs(dx) > 50) { dx < 0 ? nextSlide() : prevSlide(); }
-}, {passive:true});
+
+// URL Anchor / Mode Handling
+function checkURLParameters() {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('mode') === 'present') {
+    setStudioMode('present');
+  } else if (params.get('mode') === 'view') {
+    setStudioMode('present');
+  }
+
+  const hash = window.location.hash;
+  if (hash && hash.startsWith('#slide-')) {
+    const slideNum = parseInt(hash.replace('#slide-', ''), 10);
+    if (slideNum >= 1 && slideNum <= totalSlides) {
+      goToSlide(slideNum);
+    }
+  }
+}
+
+// TOAST NOTIFICATIONS
+function showToast(msg) {
+  let toast = document.getElementById('canvaToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'canvaToast';
+    toast.style.cssText = 'position:fixed;bottom:64px;left:50%;transform:translateX(-50%);background:#1f1f1f;border:1px solid var(--accent-orange);color:#fff;font-size:12.5px;font-weight:700;padding:8px 18px;border-radius:20px;z-index:9999;box-shadow:0 6px 20px rgba(0,0,0,0.8);display:none;align-items:center;gap:8px;font-family:Poppins,sans-serif';
+    document.body.appendChild(toast);
+  }
+  toast.innerHTML = '<span style="color:var(--accent-orange)">&#10003;</span> ' + msg;
+  toast.style.display = 'flex';
+  clearTimeout(toast._timeout);
+  toast._timeout = setTimeout(() => { toast.style.display = 'none'; }, 3200);
+}
 </script>
 </body>
 </html>
