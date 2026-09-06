@@ -1,4 +1,4 @@
-﻿# Large media files - GitHub 100MB limit
+# Large media files - GitHub 100MB limit
 *.MP3
 *.mp3
 *.mp4
@@ -8,3 +8,8 @@
 
 # Large video testimonials
 Proof-20260906T155032Z-1-001/Proof/Testimonial Videos/
+
+# React dependencies & build
+react-deck/node_modules/
+react-deck/dist/
+rendered_pptx_slides/

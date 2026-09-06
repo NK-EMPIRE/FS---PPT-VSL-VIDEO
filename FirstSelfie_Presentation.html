@@ -3388,7 +3388,18 @@ function toggleDrawerCollapse() {
 // ─────────────────────────────────────────────────────────────────────────────
 // NATIVE POWERPOINT (.PPTX) EXPORT ENGINE
 // ─────────────────────────────────────────────────────────────────────────────
-async function exportToPPTX() {
+function exportToPPTX() {
+  // Directly download the master high-resolution pre-rendered 5.3MB PowerPoint deck with exact photos
+  const link = document.createElement('a');
+  link.href = 'FirstSelfie_The_Identity_Brand_Blueprint_2026.pptx';
+  link.download = 'FirstSelfie_The_Identity_Brand_Blueprint_2026.pptx';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  showToast('PowerPoint deck (5.3MB Master .pptx with exact photos) downloaded successfully!');
+}
+
+async function exportCustomPPTX() {
   const btn = document.getElementById('btnDownloadPPTX');
   const origText = btn.innerHTML;
   btn.innerHTML = '<span>&#8987;</span> Generating PPTX...';
