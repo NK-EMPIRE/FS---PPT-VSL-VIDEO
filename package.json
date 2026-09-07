@@ -1,0 +1,11 @@
+{
+  "name": "firstselfie-vsl-deck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FirstSelfie VSL Presentation Deck - Interactive Web Application deployable on Vercel",
+  "scripts": {
+    "dev": "npm --prefix react-deck run dev",
+    "build": "npm --prefix react-deck run build",
+    "preview": "npm --prefix react-deck run preview"
+  }
+}

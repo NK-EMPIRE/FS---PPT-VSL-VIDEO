@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd react-deck && npm install && npm run build",
+  "outputDirectory": "react-deck/dist",
+  "framework": "vite"
+}
